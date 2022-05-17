@@ -4027,7 +4027,274 @@ RTP:
 \end_layout
 
 \begin_layout Standard
-Let's 
+We'll use a reduction 
+\begin_inset Formula $L_{\leq3}\leq L_{2}$
+\end_inset
+
+ defined with 
+\begin_inset Formula $f\left(\left\langle M\right\rangle \right)=\left\langle M'\right\rangle $
+\end_inset
+
+ a NDTM (with all branchings to identical configurations).
+ 
+\begin_inset Formula $M'$
+\end_inset
+
+ is defined as such (regardless of the input):
+\end_layout
+
+\begin_layout Enumerate
+For 
+\begin_inset Formula $i\in\left\{ 1,2,\dots\right\} $
+\end_inset
+
+, 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ is the 
+\begin_inset Formula $i$
+\end_inset
+
+-th word in lexicographic order in 
+\begin_inset Formula $\Sigma^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Set the counter 
+\begin_inset Formula $n=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Run 
+\begin_inset Formula $M$
+\end_inset
+
+ on each of 
+\begin_inset Formula $w_{1},w_{2},\dots,w_{i}$
+\end_inset
+
+ one by one for 
+\begin_inset Formula $i$
+\end_inset
+
+ steps (each).
+ For each 
+\begin_inset Formula $w_{j}$
+\end_inset
+
+, if 
+\begin_inset Formula $M$
+\end_inset
+
+ accepted it, increase 
+\begin_inset Formula $n$
+\end_inset
+
+ by 
+\begin_inset Formula $1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $n>3$
+\end_inset
+
+ then halt and reject.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Since we want an NDTM, we define it as such that all the branches run the
+ same configuration on the same index of step.
+\end_layout
+
+\begin_layout Proof
+This is a computable and full function.
+\end_layout
+
+\begin_layout Proof
+Note that every step in each iteration is bound to a finite execution time.
+ Thus we will either halt or for each 
+\begin_inset Formula $i$
+\end_inset
+
+, we will eventually reach the 
+\begin_inset Formula $i$
+\end_inset
+
+th iteration.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Ra\left\langle M\right\rangle \in L_{\leq3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Thus, in no iteration we will find 
+\begin_inset Formula $n>3$
+\end_inset
+
+ as the words 
+\begin_inset Formula $w_{1},w_{2},\dots,w_{i}$
+\end_inset
+
+ are different from each other.
+ Thus step 
+\begin_inset Formula $c$
+\end_inset
+
+ will never halt the execution.
+\end_layout
+
+\begin_layout Proof
+So since we don't halt the operation of 
+\begin_inset Formula $M'$
+\end_inset
+
+ at any other point, 
+\begin_inset Formula $M'$
+\end_inset
+
+ will never halt (all branches are identical, so there won't be even one
+ finite path).
+\end_layout
+
+\begin_layout Proof
+Making 
+\begin_inset Formula $\left\langle M'\right\rangle \in L_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\La$
+\end_inset
+
+ 
+\begin_inset Formula $f\left(\left\langle M\right\rangle \right)=\left\langle M'\right\rangle \in L_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Meaning that all paths of execution are infinite.
+\end_layout
+
+\begin_layout Proof
+Since all paths are identical as we defined them, it means that we never
+ halt in step c.
+\end_layout
+
+\begin_layout Proof
+BWoC, there are at least 
+\begin_inset Formula $4$
+\end_inset
+
+ words in 
+\begin_inset Formula $L\left(M\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Mark with 
+\begin_inset Formula $k$
+\end_inset
+
+ the max between the number of iterations required for each of the first
+ 
+\begin_inset Formula $4$
+\end_inset
+
+ words, and the lexicographical index of the last of those 
+\begin_inset Formula $4$
+\end_inset
+
+ words.
+\end_layout
+
+\begin_layout Proof
+So in the 
+\begin_inset Formula $k$
+\end_inset
+
+th iteration, we will get that 
+\begin_inset Formula $M$
+\end_inset
+
+ accept 
+\begin_inset Formula $4$
+\end_inset
+
+ of the 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+(s).
+ Thus making 
+\begin_inset Formula $n>3$
+\end_inset
+
+ meaning that 
+\begin_inset Formula $M'$
+\end_inset
+
+ will halt.
+\end_layout
+
+\begin_layout Proof
+Thus 
+\begin_inset Formula $L\left(M\right)$
+\end_inset
+
+ contains at most 
+\begin_inset Formula $3$
+\end_inset
+
+ words.
+ Meaning that 
+\begin_inset Formula $\left\langle M\right\rangle \in L_{\leq3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+————————–
+\end_layout
+
+\begin_layout Proof
+Thus we concluded the proof that it's a valid induction and from the induction's
+ theorem, and since 
+\begin_inset Formula $L_{\leq3}\nin RE$
+\end_inset
+
+, we get that 
+\begin_inset Formula $L_{2}\nin RE$
+\end_inset
+
+ either.
+\end_layout
+
+\begin_layout Proof
+Q.E.D
 \end_layout
 
 \begin_layout Standard
