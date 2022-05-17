@@ -74,10 +74,10 @@ theorems-std
 \shortcut idx
 \color #008000
 \end_index
-\leftmargin 1cm
-\topmargin 1cm
-\rightmargin 1cm
-\bottommargin 1.5cm
+\leftmargin 1.7cm
+\topmargin 2cm
+\rightmargin 1.7cm
+\bottommargin 2cm
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation skip
@@ -1436,6 +1436,13 @@ And we know that
 Q.E.D
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Variations on Rice's Theorem
 \end_layout
@@ -2660,6 +2667,13 @@ This concludes the reduction.
 Q.E.D
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Limits on memory and computable functions
 \end_layout
@@ -2872,6 +2886,13 @@ Since all of the TMs halt on
 
  will eventually halt with a return value.
  Then we can compare all the values that we got and return the max.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -3623,6 +3644,13 @@ Thus we got that
 Q.E.D
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Language Classification
 \end_layout
@@ -3644,7 +3672,7 @@ For each of those, decide if they're in
 \end_layout
 
 \begin_layout Subsection
-\begin_inset Formula $L_{1}=\set{\left\langle M\right\rangle }{M\text{ is a NDTM and there's a calculation path of }M\text{ on }\eps\text{ for which }M\text{ doesn't cross cell index }10}$
+\begin_inset Formula $L_{1}=\set{\left\langle M\right\rangle }{M\text{ is a NDTM and there's a calculation path of }M\text{ on }\eps\text{ which doesn't cross cell }10}$
 \end_inset
 
 
@@ -4004,13 +4032,6 @@ Thus
 Q.E.D
 \end_layout
 
-\begin_layout Proof
-\begin_inset Newpage newpage
-\end_inset
-
-
-\end_layout
-
 \begin_layout Subsection
 \begin_inset Formula $L_{2}=\set{\left\langle M\right\rangle }{M\text{ a NDTM and there isn't a finite path of execution for \ensuremath{M} on \eps}}$
 \end_inset
@@ -4297,15 +4318,8 @@ Thus we concluded the proof that it's a valid induction and from the induction's
 Q.E.D
 \end_layout
 
-\begin_layout Standard
-\begin_inset Newpage newpage
-\end_inset
-
-
-\end_layout
-
 \begin_layout Subsection
-\begin_inset Formula $L_{3}=\set{\left\langle M\right\rangle }{M\text{ a NDTM and there is a path of execution for \ensuremath{M} on \eps\ s.t. \ensuremath{M} visits the same configuration twice}}$
+\begin_inset Formula $L_{3}=\set{\left\langle M\right\rangle }{M\text{ a NDTM and there is a path of execution for \ensuremath{M} on \eps\ which repeats a config}}$
 \end_inset
 
 
@@ -4785,6 +4799,13 @@ But since
 Q.E.D
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Kolmogorov Complexity on a finite set
 \end_layout
@@ -4813,6 +4834,229 @@ With
 \end_inset
 
  Kolmogorov Complexity.
+\end_layout
+
+\begin_layout Standard
+RTP: 
+\begin_inset Formula $\forall L$
+\end_inset
+
+ finite language, 
+\begin_inset Formula $f_{L}$
+\end_inset
+
+ in computable.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $L$
+\end_inset
+
+ be a finite language and mark 
+\begin_inset Formula $n$
+\end_inset
+
+ the number of words in it.
+\end_layout
+
+\begin_layout Proof
+For each of those 
+\begin_inset Formula $w_{i}\in L$
+\end_inset
+
+ there's 
+\begin_inset Formula $K\left(w_{i}\right)=t_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Since there is only a finite number of values 
+\begin_inset Formula $w_{i},t_{i}$
+\end_inset
+
+ we can pair them together and encode them in the states of a TM 
+\begin_inset Formula $M$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $M$
+\end_inset
+
+ on input 
+\begin_inset Formula $x$
+\end_inset
+
+ is defined as follows:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+For 
+\begin_inset Formula $i\in\left\{ 1,\dots,n\right\} $
+\end_inset
+
+ (note it's a finite number of iterations)
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Take the 
+\begin_inset Formula $i$
+\end_inset
+
+th word in 
+\begin_inset Formula $L$
+\end_inset
+
+ (lexicographic order): 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Compare 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+.
+ If they differ, skip to the next iteration.
+\end_layout
+
+\begin_layout Enumerate
+(if not) halt and return the value that is paired to 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+: 
+\begin_inset Formula $t_{i}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+If we didn't halt until now, halt and return 
+\begin_inset Formula $0$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+It's obvious that this is a valid TM.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $w_{i}\in L$
+\end_inset
+
+.
+ Thus in one of the 
+\begin_inset Formula $n$
+\end_inset
+
+ iterations of 
+\begin_inset Formula $M$
+\end_inset
+
+, we will compare 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ to itself (as 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ is encoded in 
+\begin_inset Formula $M$
+\end_inset
+
+ as it's in 
+\begin_inset Formula $L$
+\end_inset
+
+) and then we return the 
+\begin_inset Formula $K\left(w_{i}\right)=t_{i}$
+\end_inset
+
+ that was paired to 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+.
+ Thus, for 
+\begin_inset Formula $f_{M}\left(w_{i}\right)=f_{L}\left(w_{i}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Now let 
+\begin_inset Formula $x\nin L$
+\end_inset
+
+.
+ Thus we will never halt on step 1.c and reach after 
+\begin_inset Formula $n$
+\end_inset
+
+ iteration step 
+\begin_inset Formula $2$
+\end_inset
+
+ in which we will halt with the value 
+\begin_inset Formula $0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Making 
+\begin_inset Formula $f_{M}\left(x\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+In conclusion, for a given 
+\begin_inset Formula $L$
+\end_inset
+
+ finite language, we can build 
+\begin_inset Formula $M$
+\end_inset
+
+ TM s.t.
+ 
+\begin_inset Formula $\forall x\in\Sigma^{*}:f_{M}\left(x\right)=f_{L}\left(x\right)$
+\end_inset
+
+.
+ Thus 
+\begin_inset Formula $f_{L}$
+\end_inset
+
+ is computable.
+\end_layout
+
+\begin_layout Proof
+Q.E.D
 \end_layout
 
 \end_body
