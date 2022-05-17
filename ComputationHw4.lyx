@@ -1,0 +1,2371 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass amsart
+\begin_preamble
+\usepackage{xcolor}
+\pagecolor[rgb]{0.15,0.15,0.15} %black
+\color[rgb]{1,1,1} %grey
+
+\newfontfamily\mylistingsfont{PT Mono}
+\definecolor{lbcolor}{rgb}{0.2,0.2,0.2}  
+\end_preamble
+\use_default_options true
+\begin_removed_modules
+theorems-ams
+\end_removed_modules
+\begin_modules
+eqs-within-sections
+figs-within-sections
+linguistics
+theorems-std
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1cm
+\topmargin 1cm
+\rightmargin 1cm
+\bottommargin 1.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Computation
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="2">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Name
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ID
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Gur Telem
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+206631848
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\undeq}[1]{\underset{\text{#1}}{\underbrace{=}}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\und}[2]{\underset{\text{#2}}{\underbrace{#1}}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\upreq}[1]{\overset{#1}{\overbrace{=}}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\upr}[2]{\overset{#2}{\overbrace{#1}}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\Z}{\mathbb{Z}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\N}{\mathbb{N}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\C}{\mathbb{C}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\P}{\mathbb{P}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\Q}{\mathbb{Q}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\R}{\mathbb{R}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\Ra}{\Longrightarrow}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\Lra}{\Longleftrightarrow}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\La}{\Longleftarrow}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\ra}{\rightarrow}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\la}{\leftarrow}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\lra}{\longleftrightarrow}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\set}[2]{\left\{  #1\mid#2\right\}  }
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\e}[2]{\left(#1,#2\right)}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\abs}[1]{\left|#1\right|}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\seg}[2]{\left[#1,#2\right]}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\absv}{\left|V\right|}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\renewcommand{\absv}{\left|E\right|}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\sseq}{\subseteq}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\ewfunc}[1]{#1:E\ra\R}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\ewfuncp}[1]{#1:E\ra\R^{+}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\ewfuncnn}[1]{#1:E\ra\R_{\geq0}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\vwfunc}[1]{#1:V\ra\R}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\d}{\partial}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\h}[1]{\hat{#1}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\hi}{\hat{i}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\hj}{\hat{j}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\hk}{\hat{k}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\hx}{\hat{x}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\hy}{\hat{y}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\hz}{\hat{z}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\grad}{\vec{\nabla}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\lam}{\lambda}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\oiint}{\varoiint}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\eps}{\varepsilon}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\ez}{\varepsilon_{0}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\vF}{\vec{F}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\vN}{\vec{N}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\renewcommand{\eps}{\varepsilon}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\t}{\theta}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\p}{\phi}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\vp}{\varphi}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\half}{\frac{1}{2}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\tp}{2\pi}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\c}[1]{\dot{#1}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\exp}[1]{\cdot10^{#1}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\hc}{\c h\c c}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\hb}{\c{\hslash}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\varF}{\mathcal{F}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\es}{\emptyset}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\nin}{\notin}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\Mx}{\left(\left\langle M\right\rangle ,x\right)}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\oHP}{\overline{HP}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Copy pastables:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\det\left(\begin{matrix}\hi & \hj & \hk\\
+\\
+\\
+\end{matrix}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\det\left(\begin{matrix}\\
+\\
+\\
+\end{matrix}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\det\left(\begin{matrix}\\
+\\
+\end{matrix}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\int_{x=}\int_{y=}\int_{z=}dzdydx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\int_{\t=}\int_{r=}\int_{z=}dzdrd\t$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula $\int_{r=}\int_{\t=}\int_{\phi=}d\phi d\t dr$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Question
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Formula $L_{1}=\set{\left(\left\langle M_{1}\right\rangle ,\left\langle M_{2}\right\rangle \right)}{\exists w:f_{M_{1}}\left(w\right)=f_{M_{2}}\left(w\right)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+RTP: 
+\begin_inset Formula $L_{1}\in RE\backslash R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+We'll define a TM 
+\begin_inset Formula $M$
+\end_inset
+
+ that will accept the language 
+\begin_inset Formula $L_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\left(\left\langle M_{1}\right\rangle ,\left\langle M_{2}\right\rangle \right)$
+\end_inset
+
+ a pair of encoded TMs.
+\end_layout
+
+\begin_layout Proof
+Using a controlled run, we can run simultaneously on both 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ on each 
+\begin_inset Formula $w_{i}\in\Sigma^{*}$
+\end_inset
+
+ and if both 
+\begin_inset Formula $M_{1},M_{2}$
+\end_inset
+
+ halt and output the same value, then 
+\begin_inset Formula $M$
+\end_inset
+
+ will accept 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+.
+ Let's describe it formally.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $M$
+\end_inset
+
+ run is:
+\end_layout
+
+\begin_layout Proof
+For each 
+\begin_inset Formula $i\in\left\{ 1,2,3,\dots\right\} $
+\end_inset
+
+, take 
+\begin_inset Formula $w_{i}\in\Sigma^{*}$
+\end_inset
+
+ (assume 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ is the 
+\begin_inset Formula $i$
+\end_inset
+
+-th word in the lexicographical order of 
+\begin_inset Formula $\Sigma^{*}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Proof
+Run each of 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ on each of 
+\begin_inset Formula $w_{1},w_{2},\dots,w_{i}$
+\end_inset
+
+ for 
+\begin_inset Formula $i$
+\end_inset
+
+ steps.
+\end_layout
+
+\begin_layout Proof
+If for a word 
+\begin_inset Formula $w_{j}$
+\end_inset
+
+ both 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ halted and returned the same value, accept 
+\begin_inset Formula $\left(\left\langle M_{1}\right\rangle ,\left\langle M_{2}\right\rangle \right)$
+\end_inset
+
+ (go to 
+\begin_inset Formula $q_{acc}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Proof
+If not, continue to the next 
+\begin_inset Formula $i$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+If 
+\begin_inset Formula $\exists w_{i}\in\Sigma^{*}$
+\end_inset
+
+ s.t.
+ both machines will halt (mark the number of steps until they both halt
+ 
+\begin_inset Formula $k$
+\end_inset
+
+) and return the same value, then after 
+\begin_inset Formula $\max\left\{ i,k\right\} $
+\end_inset
+
+ iterations of 
+\begin_inset Formula $M$
+\end_inset
+
+'s algorithm, we will find it and accept the pair 
+\begin_inset Formula $\left(\left\langle M_{1}\right\rangle ,\left\langle M_{2}\right\rangle \right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+If no such 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ exists, then 
+\begin_inset Formula $M$
+\end_inset
+
+ will continue to run forever for the pair, meaning it will not accept it.
+\end_layout
+
+\begin_layout Proof
+Thus we proved that 
+\begin_inset Formula $L\left(M\right)=L_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Thus 
+\begin_inset Formula $L_{1}\in RE$
+\end_inset
+
+ (there's a TM which accepts it).
+\end_layout
+
+\begin_layout Proof
+Now we want to prove that 
+\begin_inset Formula $L_{1}\notin R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+For that we can use the classic move of creating a reduction from 
+\begin_inset Formula $HP\leq L_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+The reduction is defined as follows: 
+\begin_inset Formula $f\left(\left\langle M\right\rangle ,x\right)=\left(\left\langle M_{x}\right\rangle ,\left\langle M_{x}\right\rangle \right)$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $M_{x}$
+\end_inset
+
+ is the TM that 
+\series bold
+ALWAYS
+\series default
+ runs 
+\begin_inset Formula $M$
+\end_inset
+
+ on 
+\begin_inset Formula $x$
+\end_inset
+
+ (whatever the input given to it).
+\end_layout
+
+\begin_layout Proof
+First, let's prove it's a valid reduction.
+ The function is full (as we know, if 
+\begin_inset Formula $\left\langle M\right\rangle $
+\end_inset
+
+ isn't a valid encoding, we see it as 
+\begin_inset Formula $M_{stam}$
+\end_inset
+
+ which runs forever).
+ Also, we know that the function is computable as we saw in the lecture.
+\end_layout
+
+\begin_layout Proof
+And now, assume 
+\begin_inset Formula $\left(\left\langle M\right\rangle ,x\right)\in HP$
+\end_inset
+
+.
+ Then it means that 
+\begin_inset Formula $M$
+\end_inset
+
+ halts for 
+\begin_inset Formula $x$
+\end_inset
+
+ (and returns whatever value).
+ Thus 
+\begin_inset Formula $\left\langle M_{x}\right\rangle $
+\end_inset
+
+ will always halt and always return the same value.
+ So we got that 
+\begin_inset Formula $f_{M_{x}}\left(x\right)=f_{M_{x}}\left(x\right)$
+\end_inset
+
+ meaning that 
+\begin_inset Formula $f\left(\left\langle M\right\rangle ,x\right)=\left(\left\langle M_{x}\right\rangle ,\left\langle M_{x}\right\rangle \right)\in L_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+And the other direction: Let 
+\begin_inset Formula $\left(\left\langle M\right\rangle ,x\right)$
+\end_inset
+
+ be a TM and an input.
+ Assume 
+\begin_inset Formula $f\left(\left\langle M\right\rangle ,x\right)=\left(\left\langle M_{x}\right\rangle ,\left\langle M_{x}\right\rangle \right)\in L_{1}$
+\end_inset
+
+.
+ Thus 
+\begin_inset Formula $M_{x}$
+\end_inset
+
+ is a TM that runs 
+\begin_inset Formula $M$
+\end_inset
+
+ on 
+\begin_inset Formula $x$
+\end_inset
+
+ and halts (with whatever value).
+ And thus 
+\begin_inset Formula $\left(\left\langle M\right\rangle ,x\right)\in HP$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Thus this is a valid reduction.
+ And from the theorem we learned in class, since 
+\begin_inset Formula $HP\notin R\Ra L_{1}\notin R$
+\end_inset
+
+.
+ Thus (along with 
+\begin_inset Formula $L_{1}\in RE$
+\end_inset
+
+) we got that 
+\begin_inset Formula $L_{1}\in RE\backslash R$
+\end_inset
+
+ as we wanted.
+\end_layout
+
+\begin_layout Proof
+Q.E.D
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Formula $L_{2}=\set{\left(\left\langle M_{1}\right\rangle ,\left\langle M_{2}\right\rangle \right)}{\forall w:f_{M_{1}}\left(w\right)=f_{M_{2}}\left(w\right)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+RTP: 
+\begin_inset Formula $L_{2}\notin RE$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+We'll use 
+\begin_inset Formula $L_{\Sigma^{*}}\notin RE$
+\end_inset
+
+ that we saw in the lecture.
+\end_layout
+
+\begin_layout Proof
+And ofc we're going to define a reduction from 
+\begin_inset Formula $L_{\Sigma^{*}}\leq L_{2}$
+\end_inset
+
+ defined with 
+\begin_inset Formula $f\left(\left\langle M\right\rangle \right)=\left(\left\langle M'\right\rangle ,\left\langle M'\right\rangle \right)$
+\end_inset
+
+ with 
+\begin_inset Formula $M'$
+\end_inset
+
+ defined as such:
+\end_layout
+
+\begin_layout Proof
+Run 
+\begin_inset Formula $M$
+\end_inset
+
+ on the input.
+\end_layout
+
+\begin_layout Proof
+If the input was rejected, enter an infinite loop.
+\end_layout
+
+\begin_layout Proof
+If the input was accepted, 
+\begin_inset Formula $M'$
+\end_inset
+
+ will output 
+\begin_inset Formula $1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+So 
+\begin_inset Formula $f$
+\end_inset
+
+ is computable.
+ It's also full because whatever 
+\begin_inset Formula $M$
+\end_inset
+
+ is, we can run it (remember universal machines).
+ Meaning the function is computable and full.
+ Thus we only need to show 
+\begin_inset Formula $f\left(\left\langle M\right\rangle \right)\in L_{2}\Lra\left\langle M\right\rangle \in L_{\Sigma^{*}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $M$
+\end_inset
+
+ a TM.
+\end_layout
+
+\begin_layout Proof
+Assume 
+\begin_inset Formula $\left\langle M\right\rangle \in L_{\Sigma^{*}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $w\in\Sigma^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Thus 
+\begin_inset Formula $M'$
+\end_inset
+
+ as we defined it, will halt in step 
+\begin_inset Formula $1$
+\end_inset
+
+ for 
+\begin_inset Formula $w$
+\end_inset
+
+ and will accept.
+ Thus 
+\begin_inset Formula $M'$
+\end_inset
+
+ will output 
+\begin_inset Formula $1$
+\end_inset
+
+ in step 
+\begin_inset Formula $3$
+\end_inset
+
+.
+ Thus 
+\begin_inset Formula $f_{M'}\left(w\right)=1=f_{M'}\left(w\right)\Ra f\left(\left\langle M\right\rangle \right)=\left(\left\langle M'\right\rangle ,\left\langle M'\right\rangle \right)\in L_{2}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Now assume 
+\begin_inset Formula $f\left(\left\langle M\right\rangle \right)=\left(\left\langle M'\right\rangle ,\left\langle M'\right\rangle \right)\in L_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $w\in\Sigma^{*}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $f_{M'}\left(w\right)=f_{M'}\left(w\right)$
+\end_inset
+
+ means that 
+\begin_inset Formula $M'$
+\end_inset
+
+ halts for 
+\begin_inset Formula $w$
+\end_inset
+
+.
+ From out definition of 
+\begin_inset Formula $M'$
+\end_inset
+
+, this can only happen in step 
+\begin_inset Formula $3$
+\end_inset
+
+.
+ Thus 
+\begin_inset Formula $M$
+\end_inset
+
+ halted and accepted 
+\begin_inset Formula $w$
+\end_inset
+
+.
+ And since that's true for every 
+\begin_inset Formula $w$
+\end_inset
+
+, then 
+\begin_inset Formula $M$
+\end_inset
+
+ accepts every 
+\begin_inset Formula $w$
+\end_inset
+
+ which means 
+\begin_inset Formula $L\left(M\right)=\Sigma^{*}\Ra\left\langle M\right\rangle \in L_{\Sigma^{*}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Thus 
+\begin_inset Formula $f\left(\left\langle M\right\rangle \right)\in L_{2}\Lra\left\langle M\right\rangle \in L_{\Sigma^{*}}$
+\end_inset
+
+.
+ And this means that 
+\begin_inset Formula $L_{\Sigma^{*}}\leq L_{2}$
+\end_inset
+
+ is a valid reduction.
+\end_layout
+
+\begin_layout Proof
+Since we know that 
+\begin_inset Formula $L_{\Sigma^{*}}\notin RE$
+\end_inset
+
+ (see the 
+\begin_inset listings
+inline true
+status open
+
+\begin_layout Plain Layout
+
+ezer.pdf
+\end_layout
+
+\end_inset
+
+ on the course's website) it means (from the reduction's theorem) that 
+\begin_inset Formula $L_{2}\notin RE$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Q.E.D
+\end_layout
+
+\begin_layout Proof
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Formula $L_{3}=\set{\left\langle M\right\rangle }{\forall M',w:f_{M}\left(\left\langle M'\right\rangle ,w\right)\in\left\{ 0,1\right\} \wedge\left(M'\,\text{stop for w}\,\Lra f_{M}\left(\left\langle M'\right\rangle ,w\right)=1\right)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+RTP: 
+\begin_inset Formula $L_{3}=\emptyset\in R$
+\end_inset
+
+ because 
+\begin_inset Formula $M_{rej}$
+\end_inset
+
+ which rejects everything immediately decides 
+\begin_inset Formula $\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let's prove though that 
+\begin_inset Formula $L_{3}=\emptyset$
+\end_inset
+
+ (we actually proved most of it in the lecture, I realise in retrospect
+ so it's probably similar to that proof so you can skip to the last line
+ if you want).
+\end_layout
+
+\begin_layout Proof
+BWoC 
+\begin_inset Formula $L_{3}\neq\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $M\in L_{3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+We saw in the lecture that 
+\begin_inset Formula $RE\backslash R$
+\end_inset
+
+ isn't an empty set.
+ So let's take any TM from it:
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $M_{RE}\in RE\backslash R$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Claim
+Thus 
+\begin_inset Formula $L\left(M_{RE}\right)$
+\end_inset
+
+ isn't decidable.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Let's define a new TM.
+ for each 
+\begin_inset Formula $w$
+\end_inset
+
+ input, 
+\begin_inset Formula $M_{d}$
+\end_inset
+
+ is defined as such:
+\end_layout
+
+\begin_layout Proof
+Checks if 
+\begin_inset Formula $f_{M}\left(\left\langle M_{RE}\right\rangle ,w\right)=1$
+\end_inset
+
+ and if not, it halts and rejects 
+\begin_inset Formula $w$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Runs 
+\begin_inset Formula $w$
+\end_inset
+
+ on 
+\begin_inset Formula $M_{RE}$
+\end_inset
+
+ and returns the same answer as 
+\begin_inset Formula $M_{RE}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+From definition 
+\begin_inset Formula $M$
+\end_inset
+
+ halts on the input 
+\begin_inset Formula $\left(\left\langle M_{RE}\right\rangle ,w\right)$
+\end_inset
+
+ (because 
+\begin_inset Formula $f_{M}\left(\left\langle M_{RE}\right\rangle ,w\right)$
+\end_inset
+
+ is well defined for each TM and input).
+\end_layout
+
+\begin_layout Proof
+Case 1: 
+\begin_inset Formula $M_{RE}$
+\end_inset
+
+ doesn't halt for 
+\begin_inset Formula $w$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $f_{M}\left(\left\langle M_{RE}\right\rangle ,w\right)=0$
+\end_inset
+
+ and 
+\begin_inset Formula $M_{d}$
+\end_inset
+
+ will halt (reject) in step 
+\begin_inset Formula $1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Case 2: 
+\begin_inset Formula $M_{RE}$
+\end_inset
+
+ halts for 
+\begin_inset Formula $w$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $f_{M}\left(\left\langle M_{RE}\right\rangle ,w\right)=1$
+\end_inset
+
+ and 
+\begin_inset Formula $M_{d}$
+\end_inset
+
+ will halt in step 
+\begin_inset Formula $2$
+\end_inset
+
+ while running 
+\begin_inset Formula $M_{RE}$
+\end_inset
+
+ on 
+\begin_inset Formula $w$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+So we got that 
+\begin_inset Formula $M_{d}$
+\end_inset
+
+ halts for every input.
+\end_layout
+
+\begin_layout Proof
+Additionally, 
+\begin_inset Formula $w\in L\left(M_{RE}\right)\Lra M_{RE}\,\text{accepts}\,w\Ra f_{M}\left(\left\langle M_{RE}\right\rangle ,w\right)=1\Ra f_{M_{d}}\left(w\right)=f_{M_{RE}}\left(w\right)\Ra w\in L\left(M_{D}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+But from the definition of 
+\begin_inset Formula $M_{d}$
+\end_inset
+
+: 
+\begin_inset Formula $w\in L\left(M_{d}\right)\Ra w\in L\left(M_{RE}\right)$
+\end_inset
+
+.
+ So we got 
+\begin_inset Formula $L\left(M_{RE}\right)=L\left(M_{d}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+So since 
+\begin_inset Formula $M_{d}$
+\end_inset
+
+ accepts 
+\begin_inset Formula $L\left(M_{RE}\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $M_{d}$
+\end_inset
+
+ halts for every input, we got that 
+\begin_inset Formula $L\left(M_{RE}\right)$
+\end_inset
+
+ is decidable in direct contradiction to our assumption.
+\end_layout
+
+\begin_layout Proof
+Thus 
+\begin_inset Formula $L_{3}=\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+And we know that 
+\begin_inset Formula $L_{3}=\emptyset=L\left(M_{rej}\right)\in R$
+\end_inset
+
+ (every finite language is in 
+\begin_inset Formula $R$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Proof
+Q.E.D
+\end_layout
+
+\begin_layout Section
+Variations on Rice's Theorem
+\end_layout
+
+\begin_layout Subsection
+For coRE
+\end_layout
+
+\begin_layout Subsubsection
+For 
+\begin_inset Formula $S$
+\end_inset
+
+ trivial attribute.
+\end_layout
+
+\begin_layout Standard
+For 
+\begin_inset Formula $S=\es$
+\end_inset
+
+ RTP: 
+\begin_inset Formula $L_{S}\in R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Meaning that 
+\begin_inset Formula $L_{S}=\es$
+\end_inset
+
+ (if 
+\begin_inset Formula $\left\langle M\right\rangle \in L_{S}$
+\end_inset
+
+ then 
+\begin_inset Formula $L\left(M\right)$
+\end_inset
+
+ whatever it is will be in 
+\begin_inset Formula $S$
+\end_inset
+
+ in contradiction to it being an empty set).
+\end_layout
+
+\begin_layout Proof
+And we know that 
+\begin_inset Formula $\es\in R$
+\end_inset
+
+ (for example because it's a finite set).
+\end_layout
+
+\begin_layout Standard
+For 
+\begin_inset Formula $S=coRE$
+\end_inset
+
+ RTP: 
+\begin_inset Formula $L_{S}\notin R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $M$
+\end_inset
+
+ be TM.
+\end_layout
+
+\begin_layout Proof
+Assume 
+\begin_inset Formula $\left\langle M\right\rangle \in L_{S}$
+\end_inset
+
+ so 
+\begin_inset Formula $L\left(M\right)\in S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+But if 
+\begin_inset Formula $L\left(M\right)\in S\Ra L\left(M\right)\in RE$
+\end_inset
+
+ (because the language has 
+\begin_inset Formula $M$
+\end_inset
+
+ which accepts it).
+\end_layout
+
+\begin_layout Proof
+Thus, if we mark 
+\begin_inset Formula $S'=R\sseq coRE$
+\end_inset
+
+ and also 
+\begin_inset Formula $S'\sseq RE$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+And because 
+\begin_inset Formula $L\left(M\right)\in S\wedge L\left(M\right)\in RE\Ra L\left(M\right)\in R\Ra\left\langle M\right\rangle \in L_{S'}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+So we got that 
+\begin_inset Formula $L_{S}\subseteq L_{S'}$
+\end_inset
+
+.
+ Since there's a TM 
+\begin_inset Formula $M'$
+\end_inset
+
+ which accepts 
+\begin_inset Formula $HP\in RE$
+\end_inset
+
+ but 
+\begin_inset Formula $HP\notin R$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $HP=L\left(M'\right)\notin S'=R$
+\end_inset
+
+.
+ But also 
+\begin_inset Formula $\left\langle M\right\rangle \in L_{RE}$
+\end_inset
+
+ per definition.
+\end_layout
+
+\begin_layout Proof
+Thus we got that 
+\begin_inset Formula $L_{S'}\subset L_{RE}$
+\end_inset
+
+.
+ We from rice, we know that not only 
+\begin_inset Formula $L_{S'}\notin R$
+\end_inset
+
+ but also 
+\begin_inset Formula $L_{S'}\notin RE$
+\end_inset
+
+ (because 
+\begin_inset Formula $\emptyset\in S'=R$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Proof
+Also, since 
+\begin_inset Formula $R\subset coRE$
+\end_inset
+
+, if 
+\begin_inset Formula $M''$
+\end_inset
+
+ is a TM such that 
+\begin_inset Formula $\left\langle M''\right\rangle \in L_{R}\Ra L\left(M''\right)\in R=S'\subset S=coRE\Ra\left\langle M''\right\rangle \in L_{S}$
+\end_inset
+
+.
+ Thus 
+\begin_inset Formula $L_{S'}\subseteq L_{S}$
+\end_inset
+
+ and thus 
+\begin_inset Formula $L_{S'}=L_{S}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Thus we got that 
+\begin_inset Formula $L_{S}\notin RE$
+\end_inset
+
+ (let alone in 
+\begin_inset Formula $R$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Proof
+We proved that 
+\begin_inset Formula $L_{S}\notin R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Write and prove a theorem for attributes 
+\begin_inset Formula $S\sseq coRE$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $L_{S}\notin R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+Let 
+\begin_inset Formula $S\sseq coRE$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $S\cap R\neq\es$
+\end_inset
+
+ 
+\begin_inset Formula $\Ra$
+\end_inset
+
+ 
+\begin_inset Formula $L_{S}\nin R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Assume 
+\begin_inset Formula $S\sseq coRE$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+In the previous section we proved that 
+\begin_inset Formula $L\left(M\right)\in coRE\Ra L\left(M\right)\in R$
+\end_inset
+
+, this ofc applies for every 
+\begin_inset Formula $L\left(M\right)\in S$
+\end_inset
+
+ as a subset of 
+\begin_inset Formula $coRE$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $M$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $\left\langle M\right\rangle \in L_{S}$
+\end_inset
+
+ so 
+\begin_inset Formula $L\left(M\right)\in R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+And similarly to how we proved in the first section 
+\begin_inset Formula $L_{S}\sseq L_{R}$
+\end_inset
+
+.
+ Thus 
+\begin_inset Formula $L_{S\backslash R}=L_{S}\backslash L_{R}=\es$
+\end_inset
+
+ (directly from expanding the definition of 
+\begin_inset Formula $L_{?}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Proof
+So 
+\begin_inset Formula $L_{S}=L_{S}\cap L_{R}=\set{\left\langle M\right\rangle }{L\left(M\right)\in S\wedge L\left(M\right)\in R}=\set{\left\langle M\right\rangle }{L\left(M\right)\in S\cap R}=L_{S\cap R}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+And since 
+\begin_inset Formula $S\cap R\subset RE$
+\end_inset
+
+ (and because 
+\begin_inset Formula $S\cap R\neq\es$
+\end_inset
+
+) then 
+\begin_inset Formula $S\cap R$
+\end_inset
+
+ is a non trivial attribute as defined in the original Rice's theorem.
+ Thus 
+\begin_inset Formula $L_{S\cap R}\nin R$
+\end_inset
+
+.
+ And since 
+\begin_inset Formula $L_{S}=L_{S\cap R}\Ra L_{S}\nin R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Q.E.D
+\end_layout
+
+\begin_layout Proof
+Note: It's also true that if 
+\begin_inset Formula $\es\in S$
+\end_inset
+
+ then 
+\begin_inset Formula $L_{S}\nin RE$
+\end_inset
+
+ and is easy to prove.
+\end_layout
+
+\begin_layout Subsection
+For functions
+\end_layout
+
+\begin_layout Subsubsection
+RTP: For trivial attribute 
+\begin_inset Formula $S$
+\end_inset
+
+, 
+\begin_inset Formula $L_{S}\in R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Case 
+\begin_inset Formula $1$
+\end_inset
+
+: 
+\begin_inset Formula $S=\emptyset$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+So 
+\begin_inset Formula $L_{S}=\emptyset$
+\end_inset
+
+ because for each 
+\begin_inset Formula $M$
+\end_inset
+
+, 
+\begin_inset Formula $f_{M}\notin S$
+\end_inset
+
+ so 
+\begin_inset Formula $\left\langle M\right\rangle \notin L_{S}$
+\end_inset
+
+.
+ And we know that 
+\begin_inset Formula $L_{S}\in R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Case 
+\begin_inset Formula $2$
+\end_inset
+
+: 
+\begin_inset Formula $S=\varF$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $M$
+\end_inset
+
+ be a TM, then 
+\begin_inset Formula $f_{M}\in\varF=S$
+\end_inset
+
+.
+ Thus 
+\begin_inset Formula $\left\langle M\right\rangle \in L_{S}\Ra L_{S}=\set{\left\langle M\right\rangle }{\forall M}$
+\end_inset
+
+.
+ Thus 
+\begin_inset Formula $M_{acc}$
+\end_inset
+
+ will decide 
+\begin_inset Formula $L_{S}$
+\end_inset
+
+ as it will accept every TM (and will ofc halt for each).
+\end_layout
+
+\begin_layout Proof
+Q.E.D
+\end_layout
+
+\begin_layout Subsubsection
+RTP: Rice's theorem for functions.
+ Can we add condition for 
+\begin_inset Formula $S$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $L_{S}\notin RE$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $S\sseq\varF$
+\end_inset
+
+.
+ Assume 
+\begin_inset Formula $S\nin\left\{ \es,\varF\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+We need to prove that 
+\begin_inset Formula $L_{S}=\set{\left\langle M\right\rangle }{f_{M}\in S}\nin R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $f\in L_{S}$
+\end_inset
+
+ (there's one because 
+\begin_inset Formula $S\neq\es$
+\end_inset
+
+).
+ Note that 
+\begin_inset Formula $f$
+\end_inset
+
+ is computable.
+ So there's a TM which calculates it.
+\end_layout
+
+\begin_layout Proof
+We'll split into cases.
+\end_layout
+
+\begin_deeper
+\begin_layout Case
+
+\series bold
+\begin_inset Formula $f_{M_{stam}}\nin S$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+We'll define a reduction 
+\begin_inset Formula $HP\leq L_{S}$
+\end_inset
+
+ with function 
+\begin_inset Formula $f_{r}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+So for 
+\begin_inset Formula $f_{r}\left(\left\langle M\right\rangle ,x\right)=\left\langle M_{x}\right\rangle $
+\end_inset
+
+ with 
+\begin_inset Formula $M_{x}$
+\end_inset
+
+ defined for input 
+\begin_inset Formula $w$
+\end_inset
+
+ as such:
+\end_layout
+
+\begin_layout Enumerate
+Run 
+\begin_inset Formula $M$
+\end_inset
+
+ on 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Write to the tape 
+\begin_inset Formula $f\left(w\right)$
+\end_inset
+
+ and halt.
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $f$
+\end_inset
+
+ in computable, 
+\begin_inset Formula $f_{r}$
+\end_inset
+
+ is a full function and computable.
+\end_layout
+
+\begin_layout Standard
+So we need to prove 
+\begin_inset Formula $\left(\left\langle M\right\rangle ,x\right)\in HP\Lra f\left(\left\langle M\right\rangle ,x\right)\in L_{S}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $\Mx$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Ra$
+\end_inset
+
+: Assume 
+\begin_inset Formula $\Mx\in HP$
+\end_inset
+
+.
+ Thus, 
+\begin_inset Formula $M_{x}$
+\end_inset
+
+ will halt sometime during step 
+\begin_inset Formula $1$
+\end_inset
+
+ and continue to step 
+\begin_inset Formula $2$
+\end_inset
+
+.
+ On step 
+\begin_inset Formula $2$
+\end_inset
+
+ it will return 
+\begin_inset Formula $f\left(w\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Thus 
+\begin_inset Formula $f_{M_{x}}=f\in L_{S}$
+\end_inset
+
+ (under our assumption).
+ So we got 
+\begin_inset Formula $\Mx\in HP\Ra f\left(\Mx\right)\in L_{S}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\La$
+\end_inset
+
+: Assume 
+\begin_inset Formula $f\left(\Mx\right)=\left\langle M_{x}\right\rangle \in L_{S}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $f_{M_{stam}}\nin S\Ra M$
+\end_inset
+
+ halts for 
+\begin_inset Formula $x$
+\end_inset
+
+ (otherwise 
+\begin_inset Formula $f$
+\end_inset
+
+ would be a function that is defined for no value as it would never halt).
+\end_layout
+
+\begin_layout Standard
+Thus 
+\begin_inset Formula $\Mx\in HP$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Thus the reduction is a valid one and since 
+\begin_inset Formula $HP\nin R\Ra L_{S}\nin R$
+\end_inset
+
+ from the reduction's theorem we learned in class.
+\end_layout
+
+\end_deeper
+\begin_layout Case
+\begin_inset Formula $f_{M_{stam}}\in S$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Since 
+\begin_inset Formula $S\neq\varF$
+\end_inset
+
+ then there's a computable function 
+\begin_inset Formula $f'\nin S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+We'll show a reduction from 
+\begin_inset Formula $\overline{HP}\leq L_{S}$
+\end_inset
+
+ function 
+\begin_inset Formula $f_{r}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $f_{r}\left(\Mx\right)=\left\langle M_{x}\right\rangle $
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $M_{x}$
+\end_inset
+
+ is defined for 
+\begin_inset Formula $w$
+\end_inset
+
+ as such:
+\end_layout
+
+\begin_layout Enumerate
+Run 
+\begin_inset Formula $M$
+\end_inset
+
+ on 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Write to the tape 
+\begin_inset Formula $f'\left(w\right)$
+\end_inset
+
+ and halt.
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $f'$
+\end_inset
+
+ is computable then 
+\begin_inset Formula $f_{r}$
+\end_inset
+
+ is full and computable.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Ra$
+\end_inset
+
+: Assume 
+\begin_inset Formula $\Mx\in\oHP$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Then 
+\begin_inset Formula $M_{x}$
+\end_inset
+
+ will never halt in step 
+\begin_inset Formula $1$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+So 
+\begin_inset Formula $f_{M_{x}}$
+\end_inset
+
+ is a function that is not defined for any input.
+ 
+\end_layout
+
+\begin_layout Standard
+Meaning 
+\begin_inset Formula $f_{M_{x}}=f_{M_{stam}}$
+\end_inset
+
+.
+ And as such 
+\begin_inset Formula $\left\langle M_{x}\right\rangle \in L_{S}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\La$
+\end_inset
+
+: Assume 
+\begin_inset Formula $f\left(\Mx\right)\in L_{S}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+BWoC, 
+\begin_inset Formula $M$
+\end_inset
+
+ halts on 
+\begin_inset Formula $x$
+\end_inset
+
+ as input.
+\end_layout
+
+\begin_layout Standard
+Thus 
+\begin_inset Formula $M_{x}$
+\end_inset
+
+ will always halt on step 
+\begin_inset Formula $1$
+\end_inset
+
+ and thus always return the same value as 
+\begin_inset Formula $f'$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+So 
+\begin_inset Formula $f_{M_{x}}=f'\nin S$
+\end_inset
+
+.
+ Thus 
+\begin_inset Formula $\left\langle M_{x}\right\rangle \nin L_{S}$
+\end_inset
+
+ contradiction.
+\end_layout
+
+\begin_layout Standard
+So we got that 
+\begin_inset Formula $M$
+\end_inset
+
+ doesn't halt for 
+\begin_inset Formula $x$
+\end_inset
+
+ meaning that 
+\begin_inset Formula $\Mx\in HP$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+This proves that the reduction is a valid one.
+ And since 
+\begin_inset Formula $\oHP\nin RE\Ra L_{S}\nin RE\Ra L_{S}\nin R$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+This concludes that proof that 
+\begin_inset Formula $L_{S}\nin R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+We also found the condition for which 
+\begin_inset Formula $L_{S}\nin RE$
+\end_inset
+
+ (
+\begin_inset Formula $f_{M_{stam}}\in S$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+Q.E.D
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Let 
+\begin_inset Formula $S\sseq RE$
+\end_inset
+
+ non trivial s.t.
+ 
+\begin_inset Formula $\Sigma^{*}\nin S$
+\end_inset
+
+.
+ RTP: 
+\begin_inset Formula $L_{S}\nin RE$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\end_body
+\end_document
