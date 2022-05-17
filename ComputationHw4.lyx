@@ -4004,6 +4004,13 @@ Thus
 Q.E.D
 \end_layout
 
+\begin_layout Proof
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 \begin_inset Formula $L_{2}=\set{\left\langle M\right\rangle }{M\text{ a NDTM and there isn't a finite path of execution for \ensuremath{M} on \eps}}$
 \end_inset
@@ -4021,6 +4028,524 @@ RTP:
 
 \begin_layout Standard
 Let's 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Formula $L_{3}=\set{\left\langle M\right\rangle }{M\text{ a NDTM and there is a path of execution for \ensuremath{M} on \eps\ s.t. \ensuremath{M} visits the same configuration twice}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Almost identical to the proof from section 5.1.
+ Except that we reject it we halted copy pasting and changing what is needed:
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $M$
+\end_inset
+
+ a NDTM.
+\end_layout
+
+\begin_layout Proof
+We'll define 
+\begin_inset Formula $M'$
+\end_inset
+
+ NDTM on 
+\begin_inset Formula $\left\langle M\right\rangle $
+\end_inset
+
+ as such:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Write 
+\begin_inset Formula $\eps$
+\end_inset
+
+ to the input of 
+\begin_inset Formula $M$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Set an area for past configurations
+\end_layout
+
+\begin_layout Enumerate
+From the current configuration, run a single step of 
+\begin_inset Formula $M$
+\end_inset
+
+ (here 
+\begin_inset Formula $M'$
+\end_inset
+
+ branches together with 
+\begin_inset Formula $M$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Enumerate
+Check if the current configuration of 
+\begin_inset Formula $M$
+\end_inset
+
+ is one that we already visited.
+ If it is, 
+\series bold
+halt and accept
+\series default
+.
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $M$
+\end_inset
+
+ halted, then 
+\series bold
+halt and reject
+\series default
+.
+\end_layout
+
+\begin_layout Enumerate
+Save the current configuration of 
+\begin_inset Formula $M$
+\end_inset
+
+ in the area we set for configurations.
+\end_layout
+
+\begin_layout Enumerate
+Go to step 
+\begin_inset Formula $3$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+If 
+\begin_inset Formula $M'$
+\end_inset
+
+ accepts 
+\begin_inset Formula $\left\langle M\right\rangle $
+\end_inset
+
+, then it's only in step 
+\begin_inset Formula $5$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Since 
+\begin_inset Formula $M'$
+\end_inset
+
+ branching follows that of 
+\begin_inset Formula $M$
+\end_inset
+
+, then it means that we repeated a configuration.
+\end_layout
+
+\begin_layout Proof
+And for the other direction:
+\end_layout
+
+\begin_layout Proof
+Assume 
+\begin_inset Formula $M$
+\end_inset
+
+ has a repeating configuration.
+\end_layout
+
+\begin_layout Proof
+Thus, assume the repeating of the configuration is in the 
+\begin_inset Formula $k$
+\end_inset
+
+th branching of 
+\begin_inset Formula $M$
+\end_inset
+
+'s execution.
+\end_layout
+
+\begin_layout Proof
+In that case, since each step is capped to a finite execution time, we will
+ keep branching and eventually reach the 
+\begin_inset Formula $k$
+\end_inset
+
+th branch of execution of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+At that point, one of the branches of execution of 
+\begin_inset Formula $M'$
+\end_inset
+
+ will see the repeating configuration of 
+\begin_inset Formula $M$
+\end_inset
+
+ and will halt, accepting 
+\begin_inset Formula $\left\langle M\right\rangle $
+\end_inset
+
+.
+ Thus there's a path of execution where 
+\begin_inset Formula $M'$
+\end_inset
+
+ accepts 
+\begin_inset Formula $\left\langle M\right\rangle $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+In conclusion 
+\begin_inset Formula $M$
+\end_inset
+
+ has a repeating configuration 
+\begin_inset Formula $\Lra$
+\end_inset
+
+ 
+\begin_inset Formula $M'$
+\end_inset
+
+ will accept 
+\begin_inset Formula $\left\langle M\right\rangle $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Thus 
+\begin_inset Formula $L\left(M'\right)=L_{3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Thus 
+\begin_inset Formula $L_{3}\in RE$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let's prove that 
+\begin_inset Formula $L_{3}\nin R$
+\end_inset
+
+ using a reduction 
+\begin_inset Formula $HP\leq L_{3}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $f\left(\Mx\right)=\left\langle M_{x}\right\rangle $
+\end_inset
+
+ with 
+\begin_inset Formula $M_{x}$
+\end_inset
+
+ NDTM defined as such (no matter what the input of it):
+\end_layout
+
+\begin_layout Proof
+We already shows how we detect repeating configuration so we'll just assume
+ we have that ability:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Run 
+\begin_inset Formula $M$
+\end_inset
+
+ on 
+\begin_inset Formula $x$
+\end_inset
+
+ for one step.
+\end_layout
+
+\begin_layout Enumerate
+If it reached a configuration that we saw before, keep going right forever.
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $M$
+\end_inset
+
+ halted, make an 
+\begin_inset Formula $S$
+\end_inset
+
+ step staying in the same state and don't change the tape, basically do
+ the step again (stay in the same configuration of 
+\begin_inset Formula $M_{x}$
+\end_inset
+
+ itself).
+\end_layout
+
+\begin_layout Enumerate
+Go to step 
+\begin_inset Formula $1$
+\end_inset
+
+ to continue the execution of 
+\begin_inset Formula $M$
+\end_inset
+
+ on 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Since we want 
+\begin_inset Formula $M_{x}$
+\end_inset
+
+ to be NDTM we can just set every branching as branching into identical
+ configurations.
+\end_layout
+
+\begin_layout Proof
+Now this is a full and computable function.
+ Assume 
+\begin_inset Formula $f\left(\Mx\right)=\left\langle M_{x}\right\rangle \in L_{3}$
+\end_inset
+
+.
+ Meaning that 
+\begin_inset Formula $M_{x}$
+\end_inset
+
+ repeated a configuration.
+\end_layout
+
+\begin_layout Proof
+If 
+\begin_inset Formula $M$
+\end_inset
+
+ repeats a configuration, then 
+\begin_inset Formula $M_{x}$
+\end_inset
+
+ will keep going right forever (never repeating a configuration).
+\end_layout
+
+\begin_layout Proof
+So in step 
+\begin_inset Formula $1$
+\end_inset
+
+ and 
+\begin_inset Formula $2$
+\end_inset
+
+ it's impossible for 
+\begin_inset Formula $M_{x}$
+\end_inset
+
+ to repeat a configuration.
+\end_layout
+
+\begin_layout Proof
+BWoC we reached step 
+\begin_inset Formula $4$
+\end_inset
+
+ with the same configuration twice: Thus 
+\begin_inset Formula $M$
+\end_inset
+
+ didn't halt and didn't repeat a configuration (otherwise we wouldn't reach
+ step 
+\begin_inset Formula $4$
+\end_inset
+
+).
+ Thus the configuration of 
+\begin_inset Formula $M'$
+\end_inset
+
+ it new since we it need to hold a config of 
+\begin_inset Formula $M$
+\end_inset
+
+ that is new.
+ Thus in step 
+\begin_inset Formula $4$
+\end_inset
+
+ we only see new configurations.
+\end_layout
+
+\begin_layout Proof
+Thus if we repeated a configuration, it's in step 
+\begin_inset Formula $3$
+\end_inset
+
+ and only if 
+\begin_inset Formula $M$
+\end_inset
+
+ halted.
+ Thus 
+\begin_inset Formula $M$
+\end_inset
+
+ halts on 
+\begin_inset Formula $x$
+\end_inset
+
+ and thus 
+\begin_inset Formula $\Mx\in HP$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Now assume 
+\begin_inset Formula $\Mx\in HP$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Since 
+\begin_inset Formula $M$
+\end_inset
+
+ halts on 
+\begin_inset Formula $x$
+\end_inset
+
+ it never repeats a config.
+ Thus, until 
+\begin_inset Formula $M$
+\end_inset
+
+ halts, 
+\begin_inset Formula $M_{x}$
+\end_inset
+
+will never repeat a config.
+ Thus then 
+\begin_inset Formula $M$
+\end_inset
+
+ halts, 
+\begin_inset Formula $M_{x}$
+\end_inset
+
+ will enter an infinite loop staying in the same configuration (repeating
+ a configuration).
+\end_layout
+
+\begin_layout Proof
+Thus we proved that 
+\begin_inset Formula $\Mx\in HP\Lra\left\langle M_{x}\right\rangle \in L_{3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+But since 
+\begin_inset Formula $HP\nin R$
+\end_inset
+
+ (from the reduction's theorem) we get that 
+\begin_inset Formula $L_{3}\nin R$
+\end_inset
+
+ as well.
+\end_layout
+
+\begin_layout Proof
+Q.E.D
+\end_layout
+
+\begin_layout Section
+Kolmogorov Complexity on a finite set
+\end_layout
+
+\begin_layout Standard
+Given 
+\begin_inset Formula $L$
+\end_inset
+
+ language:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f_{L}\left(x\right)=\begin{cases}
+K\left(x\right) & x\in L\\
+0 & else
+\end{cases}
+\]
+
+\end_inset
+
+With 
+\begin_inset Formula $K\left(x\right)$
+\end_inset
+
+ Kolmogorov Complexity.
 \end_layout
 
 \end_body
