@@ -99,7 +99,7 @@ theorems-std
 \begin_body
 
 \begin_layout Title
-Computation
+Computation HW4
 \end_layout
 
 \begin_layout Standard
@@ -562,6 +562,13 @@ Copy pastables:
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
 \end_inset
 
 
@@ -2826,6 +2833,10 @@ For each
 \begin_inset Formula $3$
 \end_inset
 
+ options for the writing for each, there are 
+\begin_inset Formula $3$
+\end_inset
+
  options for movement of the reading head, for each, there's 
 \begin_inset Formula $n-1$
 \end_inset
@@ -2867,8 +2878,1149 @@ Since all of the TMs halt on
 Flexible acceptance
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subsection
+Need to PROVE: 
+\begin_inset Formula $RE\sseq A$
+\end_inset
 
+.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $L\left(M\right)\in RE$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+For each state 
+\begin_inset Formula $q$
+\end_inset
+
+ in 
+\begin_inset Formula $M$
+\end_inset
+
+, we're add one more state 
+\begin_inset Formula $q'$
+\end_inset
+
+ which will mean 
+\begin_inset Quotes eld
+\end_inset
+
+go immediately left
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Whenever 
+\begin_inset Formula $M$
+\end_inset
+
+ is supposed to do an 
+\begin_inset Formula $S$
+\end_inset
+
+ step and go to state 
+\begin_inset Formula $q$
+\end_inset
+
+ while writing 
+\begin_inset Formula $t$
+\end_inset
+
+ to the tape: replace that with writing 
+\begin_inset Formula $t$
+\end_inset
+
+ to the tape, doing an 
+\begin_inset Formula $R$
+\end_inset
+
+ step, and moving to state 
+\begin_inset Formula $q'$
+\end_inset
+
+ instead of 
+\begin_inset Formula $q$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+If 
+\begin_inset Formula $M$
+\end_inset
+
+ is in state 
+\begin_inset Formula $q'$
+\end_inset
+
+, it will do an 
+\begin_inset Formula $L$
+\end_inset
+
+ step, not changing the tape and moving to state 
+\begin_inset Formula $q$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+We got an 
+\begin_inset Formula $M'$
+\end_inset
+
+ which is equivalent to 
+\begin_inset Formula $M$
+\end_inset
+
+ in the sense that instead of all the 
+\begin_inset Formula $S$
+\end_inset
+
+ steps in 
+\begin_inset Formula $M$
+\end_inset
+
+, 
+\begin_inset Formula $M'$
+\end_inset
+
+ will go right and then immediately left, then continue as 
+\begin_inset Formula $M$
+\end_inset
+
+ would.
+\end_layout
+
+\begin_layout Proof
+Thus 
+\begin_inset Formula $L\left(M'\right)=L\left(M\right)$
+\end_inset
+
+.
+ But since 
+\begin_inset Formula $M'$
+\end_inset
+
+ doesn't do any 
+\begin_inset Formula $S$
+\end_inset
+
+ steps (let alone an infinite number of them), if 
+\begin_inset Formula $w\in Flex-L\left(M'\right)$
+\end_inset
+
+ then 
+\begin_inset Formula $w\in L\left(M'\right)$
+\end_inset
+
+.
+ And since 
+\begin_inset Formula $w\in L\left(M'\right)$
+\end_inset
+
+ per definition means 
+\begin_inset Formula $w\in Flex-L\left(M'\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Then we got that 
+\begin_inset Formula $Flex-L\left(M'\right)=L\left(M'\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+So 
+\begin_inset Formula $L\left(M'\right)\in A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Q.E.D
+\end_layout
+
+\begin_layout Subsection
+Need to prove 
+\begin_inset Formula $\oHP\in A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $\Mx$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+We'll define a TM 
+\begin_inset Formula $M'$
+\end_inset
+
+ on 
+\begin_inset Formula $\Mx$
+\end_inset
+
+ as such:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+For 
+\begin_inset Formula $i\in\left\{ 1,2,\dots\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Run 
+\begin_inset Formula $M$
+\end_inset
+
+ on 
+\begin_inset Formula $x$
+\end_inset
+
+ for 
+\begin_inset Formula $i$
+\end_inset
+
+ steps.
+ If 
+\begin_inset Formula $M$
+\end_inset
+
+ halted, reject 
+\begin_inset Formula $\Mx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Do an 
+\begin_inset Formula $S$
+\end_inset
+
+ step
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Proof
+Assume 
+\begin_inset Formula $\Mx\in\oHP$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Thus during the execution of 
+\begin_inset Formula $M'$
+\end_inset
+
+, 
+\begin_inset Formula $M$
+\end_inset
+
+ will never reject in step 1.a.
+ So for each 
+\begin_inset Formula $i$
+\end_inset
+
+ we'll do an 
+\begin_inset Formula $S$
+\end_inset
+
+ step and continue to the 
+\begin_inset Formula $i+1$
+\end_inset
+
+th iteration.
+\end_layout
+
+\begin_layout Proof
+i.e.
+ since we never halt but at the same time, we never get stuck on a single
+ step, we will do an infinite number of 
+\begin_inset Formula $S$
+\end_inset
+
+ steps.
+\end_layout
+
+\begin_layout Proof
+Thus 
+\begin_inset Formula $w\in Flex-L\left(M'\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Assume 
+\begin_inset Formula $\Mx\nin\oHP$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Thus 
+\begin_inset Formula $M$
+\end_inset
+
+ will halt on 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Let's mark 
+\begin_inset Formula $k$
+\end_inset
+
+ the number of steps 
+\begin_inset Formula $M$
+\end_inset
+
+ will do before halting.
+\end_layout
+
+\begin_layout Proof
+As we said, no iteration gets stuck because each sub-step has a finite limit
+ on its execution steps.
+\end_layout
+
+\begin_layout Proof
+Thus in the 
+\begin_inset Formula $k$
+\end_inset
+
+th iteration, 
+\begin_inset Formula $M$
+\end_inset
+
+ will halt on 
+\begin_inset Formula $x$
+\end_inset
+
+ and reject 
+\begin_inset Formula $\Mx$
+\end_inset
+
+.
+ Meaning that 
+\begin_inset Formula $\Mx\nin Flex-L\left(M'\right)$
+\end_inset
+
+ because there are a finite number of (
+\begin_inset Formula $S$
+\end_inset
+
+) steps and neither did 
+\begin_inset Formula $M'$
+\end_inset
+
+ accept 
+\begin_inset Formula $\Mx$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Together, we got that 
+\begin_inset Formula $\Mx\in\oHP\Lra\Mx\in Flex-L\left(M'\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Then we showed 
+\begin_inset Formula $M'$
+\end_inset
+
+ TM s.t.
+ 
+\begin_inset Formula $Flex-L\left(M'\right)=\oHP$
+\end_inset
+
+.
+ Thus 
+\begin_inset Formula $\oHP\in A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Q.E.D
+\end_layout
+
+\begin_layout Subsection
+RTP: 
+\begin_inset Formula $L_{=3}\in A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let's build 
+\begin_inset Formula $M$
+\end_inset
+
+ for which 
+\begin_inset Formula $Flex-L\left(M\right)=L_{=3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $M'$
+\end_inset
+
+ be a TM.
+\end_layout
+
+\begin_layout Proof
+As we proved in the first section, for each TM, there's an equivalent TM
+ without 
+\begin_inset Formula $S$
+\end_inset
+
+ steps.
+ So let's just assume 
+\begin_inset Formula $M'$
+\end_inset
+
+ is without 
+\begin_inset Formula $S$
+\end_inset
+
+ steps (if it includes them, then our 
+\begin_inset Formula $M$
+\end_inset
+
+ will do the 
+\begin_inset Quotes eld
+\end_inset
+
+right then left
+\begin_inset Quotes erd
+\end_inset
+
+ trick instead of doing an 
+\begin_inset Formula $S$
+\end_inset
+
+ step).
+\end_layout
+
+\begin_layout Proof
+So our 
+\begin_inset Formula $M$
+\end_inset
+
+ running on 
+\begin_inset Formula $\left\langle M'\right\rangle $
+\end_inset
+
+ will be defined as such:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+For 
+\begin_inset Formula $i\in\left\{ 1,2,\dots\right\} $
+\end_inset
+
+, 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ is the 
+\begin_inset Formula $i$
+\end_inset
+
+-th word in lexicographic order in 
+\begin_inset Formula $\Sigma^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Set counter 
+\begin_inset Formula $n=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Run 
+\begin_inset Formula $M'$
+\end_inset
+
+ on each of 
+\begin_inset Formula $w_{1},w_{2},\dots,w_{i}$
+\end_inset
+
+ one by one for 
+\begin_inset Formula $i$
+\end_inset
+
+ steps (each).
+ For each 
+\begin_inset Formula $w_{j}$
+\end_inset
+
+, if 
+\begin_inset Formula $M'$
+\end_inset
+
+ accepted it, increase 
+\begin_inset Formula $n$
+\end_inset
+
+ by 
+\begin_inset Formula $1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $n==3$
+\end_inset
+
+, do an 
+\begin_inset Formula $S$
+\end_inset
+
+ step.
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $n>3$
+\end_inset
+
+, reject 
+\begin_inset Formula $\left\langle M'\right\rangle $
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Proof
+Note that we only halt 
+\begin_inset Formula $M$
+\end_inset
+
+ in step 1.d (in which we reject 
+\begin_inset Formula $\left\langle M'\right\rangle $
+\end_inset
+
+).
+\end_layout
+
+\begin_deeper
+\begin_layout Case
+\begin_inset Formula $\left|L\left(M'\right)\right|=3$
+\end_inset
+
+.
+ Assume we're in the 
+\begin_inset Formula $i$
+\end_inset
+
+th iteration, then at most 
+\begin_inset Formula $3$
+\end_inset
+
+ of the word 
+\begin_inset Formula $w_{1},\dots,w_{i}$
+\end_inset
+
+ can be accepted (
+\begin_inset Formula $M'$
+\end_inset
+
+ doesn't accept more than that...).
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Thus 
+\begin_inset Formula $n$
+\end_inset
+
+ will never be set to 
+\begin_inset Formula $n>3$
+\end_inset
+
+ and we will never reject (and will never halt).
+\end_layout
+
+\begin_layout Standard
+Now, each of the 
+\begin_inset Formula $3$
+\end_inset
+
+ words in 
+\begin_inset Formula $L\left(M'\right)$
+\end_inset
+
+ has a number of steps before 
+\begin_inset Formula $M'$
+\end_inset
+
+ halts.
+ Let us mark 
+\begin_inset Formula $k$
+\end_inset
+
+ the max of those numbers.
+\end_layout
+
+\begin_layout Standard
+Again since only 
+\begin_inset Formula $3$
+\end_inset
+
+ words, let us mark 
+\begin_inset Formula $t$
+\end_inset
+
+ the word with the max lexicographic index.
+\end_layout
+
+\begin_layout Standard
+So from the 
+\begin_inset Formula $\max\left(k,t\right)$
+\end_inset
+
+-th iteration and all iterations following, we will find all of the 
+\begin_inset Formula $3$
+\end_inset
+
+ words with each iteration.
+ Thus making an 
+\begin_inset Formula $S$
+\end_inset
+
+ step.
+\end_layout
+
+\begin_layout Standard
+Since we never halt, we will do an infinite number of iterations (each step
+ in each iteration has a finite number of execution steps), we will do an
+ infinite number of 
+\begin_inset Formula $S$
+\end_inset
+
+ steps.
+\end_layout
+
+\begin_layout Standard
+So we got that 
+\begin_inset Formula $\left\langle M'\right\rangle \in Flex-L\left(M\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Case
+\begin_inset Formula $\left|L\left(M'\right)\right|<3$
+\end_inset
+
+.
+ In this case we will never reach 
+\begin_inset Formula $n==3$
+\end_inset
+
+ do we will never halt (let alone accept), nor we will do any 
+\begin_inset Formula $S$
+\end_inset
+
+ steps.
+ Thus 
+\begin_inset Formula $\left\langle M'\right\rangle \nin Flex-L\left(M\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Case
+\begin_inset Formula $\left|L\left(M'\right)\right|>3$
+\end_inset
+
+.
+ Thus eventually 
+\begin_inset Formula $M$
+\end_inset
+
+ will find the 
+\begin_inset Formula $4$
+\end_inset
+
+-th word and halt, rejecting 
+\begin_inset Formula $\left\langle M'\right\rangle $
+\end_inset
+
+.
+ So again 
+\begin_inset Formula $\left\langle M'\right\rangle \nin Flex-L\left(M\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+Thus we got that 
+\begin_inset Formula $\left|L\left(M'\right)\right|=3\Lra\left\langle M'\right\rangle \in Flex-L\left(M\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Q.E.D
+\end_layout
+
+\begin_layout Section
+Language Classification
+\end_layout
+
+\begin_layout Standard
+For each of those, decide if they're in 
+\begin_inset Formula $R$
+\end_inset
+
+ or 
+\begin_inset Formula $RE\backslash R$
+\end_inset
+
+ or not in 
+\begin_inset Formula $RE$
+\end_inset
+
+ at all.
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Formula $L_{1}=\set{\left\langle M\right\rangle }{M\text{ is a NDTM and there's a calculation path of }M\text{ on }\eps\text{ for which }M\text{ doesn't cross cell index }10}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+RTP: 
+\begin_inset Formula $L_{1}\in R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Let 
+\begin_inset Formula $M$
+\end_inset
+
+ a NDTM.
+\end_layout
+
+\begin_layout Proof
+We'll define 
+\begin_inset Formula $M'$
+\end_inset
+
+ NDTM on 
+\begin_inset Formula $\left\langle M\right\rangle $
+\end_inset
+
+ as such:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Write 
+\begin_inset Formula $\eps$
+\end_inset
+
+ to the input of 
+\begin_inset Formula $M$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Set an area for past configurations and set an area to save current cell
+ index of 
+\begin_inset Formula $M$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+From the current configuration, run a single step of 
+\begin_inset Formula $M$
+\end_inset
+
+ (here 
+\begin_inset Formula $M'$
+\end_inset
+
+ branches together with 
+\begin_inset Formula $M$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $M$
+\end_inset
+
+ passed the 
+\begin_inset Formula $10$
+\end_inset
+
+th cell, we 
+\series bold
+halt and reject
+\series default
+.
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $M$
+\end_inset
+
+ halted, then 
+\series bold
+halt and accept
+\series default
+.
+\end_layout
+
+\begin_layout Enumerate
+Check if the current configuration of 
+\begin_inset Formula $M$
+\end_inset
+
+ is one that we already visited.
+ If it is, 
+\series bold
+halt and accept
+\series default
+.
+\end_layout
+
+\begin_layout Enumerate
+Save the current configuration of 
+\begin_inset Formula $M$
+\end_inset
+
+ in the area we set for configurations.
+\end_layout
+
+\begin_layout Enumerate
+Go to step 
+\begin_inset Formula $3$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+If 
+\begin_inset Formula $M'$
+\end_inset
+
+ will accept 
+\begin_inset Formula $\left\langle M\right\rangle $
+\end_inset
+
+, then it's only in either step 
+\begin_inset Formula $5$
+\end_inset
+
+ or 
+\begin_inset Formula $6$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Since 
+\begin_inset Formula $M'$
+\end_inset
+
+ branching follows that of 
+\begin_inset Formula $M$
+\end_inset
+
+, then it means we found a path with 
+\begin_inset Formula $M$
+\end_inset
+
+ not passing cell 
+\begin_inset Formula $10$
+\end_inset
+
+.
+ The second we pass cell 
+\begin_inset Formula $10$
+\end_inset
+
+, we halt that path and we don't continue the execution of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ Thus if we reached one of the above steps, it means that in the path of
+ execution of 
+\begin_inset Formula $M$
+\end_inset
+
+ we didn't pass cell 
+\begin_inset Formula $10$
+\end_inset
+
+.
+ And we either got stuck in an infinite loop (a configuration we already
+ visit in that path of execution) or 
+\begin_inset Formula $M$
+\end_inset
+
+ halted on 
+\begin_inset Formula $\eps$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Either way, it's a pass that will never pass cell 
+\begin_inset Formula $10$
+\end_inset
+
+.
+ Thus if 
+\begin_inset Formula $M'$
+\end_inset
+
+ accepts 
+\begin_inset Formula $\left\langle M\right\rangle $
+\end_inset
+
+ then there must be a path where 
+\begin_inset Formula $M$
+\end_inset
+
+ doesn't pass cell 
+\begin_inset Formula $10$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+And for the other direction:
+\end_layout
+
+\begin_layout Proof
+Assume 
+\begin_inset Formula $M'$
+\end_inset
+
+ doesn't accept 
+\begin_inset Formula $\left\langle M\right\rangle $
+\end_inset
+
+.
+ All paths of execution of 
+\begin_inset Formula $M'$
+\end_inset
+
+ either rejected in step 
+\begin_inset Formula $4$
+\end_inset
+
+ (meaning that we that path of 
+\begin_inset Formula $M$
+\end_inset
+
+ passes cell 
+\begin_inset Formula $10$
+\end_inset
+
+) or never halt.
+\end_layout
+
+\begin_layout Proof
+BWoC 
+\begin_inset Formula $M'$
+\end_inset
+
+ has a path that doesn't halt:
+\end_layout
+
+\begin_layout Proof
+Thus there's a path of execution for 
+\begin_inset Formula $M$
+\end_inset
+
+ that doesn't pass cell 
+\begin_inset Formula $10$
+\end_inset
+
+, doesn't halt 
+\series bold
+and
+\series default
+ doesn't repeat a configuration.
+ This we already know is impossible (finite number of configurations that
+ don't include cells after cell 
+\begin_inset Formula $10$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Proof
+Thus if 
+\begin_inset Formula $M'$
+\end_inset
+
+ doesn't accept 
+\begin_inset Formula $\left\langle M\right\rangle $
+\end_inset
+
+ is because all paths of executions pass cell 
+\begin_inset Formula $10$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Thus 
+\begin_inset Formula $\left\langle M\right\rangle $
+\end_inset
+
+ is accepted by 
+\begin_inset Formula $M'$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $M$
+\end_inset
+
+ has a path of execution that doesn't pass cell 
+\begin_inset Formula $10$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+We learned in class that there's a 
+\begin_inset Formula $M''$
+\end_inset
+
+ equivalent to 
+\begin_inset Formula $M'$
+\end_inset
+
+ but deterministic.
+\end_layout
+
+\begin_layout Proof
+Thus 
+\begin_inset Formula $M''$
+\end_inset
+
+ is a TM that halts for every input and accepts 
+\begin_inset Formula $L_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Thus 
+\begin_inset Formula $L_{1}\in R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Q.E.D
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Formula $L_{2}=\set{\left\langle M\right\rangle }{M\text{ a NDTM and there isn't a finite path of execution for \ensuremath{M} on \eps}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+RTP: 
+\begin_inset Formula $L_{2}\nin RE$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Let's 
 \end_layout
 
 \end_body
