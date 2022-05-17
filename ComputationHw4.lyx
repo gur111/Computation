@@ -2320,7 +2320,8 @@ This proves that the reduction is a valid one.
 \end_layout
 
 \end_deeper
-\begin_layout Standard
+\end_deeper
+\begin_layout Proof
 This concludes that proof that 
 \begin_inset Formula $L_{S}\nin R$
 \end_inset
@@ -2328,7 +2329,7 @@ This concludes that proof that
 .
 \end_layout
 
-\begin_layout Standard
+\begin_layout Proof
 We also found the condition for which 
 \begin_inset Formula $L_{S}\nin RE$
 \end_inset
@@ -2340,11 +2341,10 @@ We also found the condition for which
 ).
 \end_layout
 
-\begin_layout Standard
+\begin_layout Proof
 Q.E.D
 \end_layout
 
-\end_deeper
 \begin_layout Subsection
 Let 
 \begin_inset Formula $S\sseq RE$
@@ -2361,6 +2361,510 @@ Let
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Proof
+Since 
+\begin_inset Formula $S$
+\end_inset
+
+ is non trivial, let 
+\begin_inset Formula $M'$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $\left\langle M'\right\rangle \in L_{S}$
+\end_inset
+
+.
+ From the assumption, 
+\begin_inset Formula $L\left(M'\right)\neq\Sigma^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+We'll prove it using a reduction 
+\begin_inset Formula $\oHP\leq L_{S}$
+\end_inset
+
+ with the function 
+\begin_inset Formula $f\left(\Mx\right)=\left\langle M_{x}\right\rangle $
+\end_inset
+
+ with 
+\begin_inset Formula $M_{x}$
+\end_inset
+
+ for input 
+\begin_inset Formula $w$
+\end_inset
+
+ is defined as such:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Run 
+\begin_inset Formula $M'$
+\end_inset
+
+ on 
+\begin_inset Formula $w$
+\end_inset
+
+.
+ If it accepted, halt and accept 
+\begin_inset Formula $w$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Run 
+\begin_inset Formula $M$
+\end_inset
+
+ on 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Accept 
+\begin_inset Formula $w$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+As we see, the function is computable and full.
+ Need to prove 
+\begin_inset Formula $f\left(\Mx\right)\in L_{S}=\left\langle M_{x}\right\rangle \in\oHP$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Ra$
+\end_inset
+
+ Assume 
+\begin_inset Formula $f\left(\Mx\right)\in L_{S}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+So 
+\begin_inset Formula $\Sigma^{*}\neq L\left(M_{x}\right)\in S$
+\end_inset
+
+.
+ Thus let 
+\begin_inset Formula $w\in\Sigma^{*}$
+\end_inset
+
+ be 
+\begin_inset Formula $w\nin L\left(M_{x}\right)$
+\end_inset
+
+.
+ BWoC: 
+\begin_inset Formula $M$
+\end_inset
+
+ halts for 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+So when running 
+\begin_inset Formula $M_{x}$
+\end_inset
+
+, during step 
+\begin_inset Formula $1$
+\end_inset
+
+ we won't accept and go to step 
+\begin_inset Formula $2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+In step 
+\begin_inset Formula $2$
+\end_inset
+
+, we will finish eventually step 
+\begin_inset Formula $2$
+\end_inset
+
+ and go to accept in step 
+\begin_inset Formula $3$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+We got 
+\begin_inset Formula $w\in L\left(M_{x}\right)$
+\end_inset
+
+.
+ In contradiction.
+ Thus 
+\begin_inset Formula $M$
+\end_inset
+
+ doesn't halt for 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\Mx\in\oHP$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $\La$
+\end_inset
+
+ Assume 
+\begin_inset Formula $\Mx\in\oHP$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Since 
+\begin_inset Formula $L\left(M'\right)\neq\Sigma^{*}$
+\end_inset
+
+ let 
+\begin_inset Formula $w\nin L\left(M'\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Thus 
+\begin_inset Formula $M_{x}$
+\end_inset
+
+ will not halt in step 
+\begin_inset Formula $1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+And in step 
+\begin_inset Formula $2$
+\end_inset
+
+ it will get stuck in a loop (infinite).
+ Thus 
+\begin_inset Formula $w\nin L\left(M_{x}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Now let 
+\begin_inset Formula $w'\in L\left(M'\right)$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $M_{x}$
+\end_inset
+
+ will halt in step 
+\begin_inset Formula $1$
+\end_inset
+
+ and accept 
+\begin_inset Formula $w'$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+So 
+\begin_inset Formula $w'\in L\left(M_{x}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+We got that 
+\begin_inset Formula $w\in L\left(M_{x}\right)\Lra w\in L\left(M'\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Thus 
+\begin_inset Formula $L\left(M_{x}\right)=L\left(M'\right)\in S\Ra\left\langle M\right\rangle \in L_{S}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+This concludes the reduction.
+ So from the reduction's theorem, we get that since 
+\begin_inset Formula $\oHP\nin RE\Ra L_{S}\nin RE$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proof
+Q.E.D
+\end_layout
+
+\begin_layout Section
+Limits on memory and computable functions
+\end_layout
+
+\begin_layout Standard
+For each function, decide if they're computable.
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Formula $f_{1}$
+\end_inset
+
+ on 
+\begin_inset Formula $\left\langle M\right\rangle $
+\end_inset
+
+ will return the index of the right most cell that 
+\begin_inset Formula $M$
+\end_inset
+
+ will reach during its execution on 
+\begin_inset Formula $\eps$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Yes! It's computable.
+\end_layout
+
+\begin_layout Standard
+Since we don't need to prove I will explain in short why it's computable.
+\end_layout
+
+\begin_layout Standard
+We can build a TM with a few tapes:
+\end_layout
+
+\begin_layout Enumerate
+For executing 
+\begin_inset Formula $M$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+For saving all the configurations that we saw 
+\begin_inset Formula $M$
+\end_inset
+
+ in
+\end_layout
+
+\begin_layout Enumerate
+Tape to save the max index 
+\begin_inset Formula $M$
+\end_inset
+
+ reached during execution
+\end_layout
+
+\begin_layout Standard
+Our TM will run 
+\begin_inset Formula $M$
+\end_inset
+
+ step by step, and for each step:
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $M$
+\end_inset
+
+ halted, return the max index.
+\end_layout
+
+\begin_layout Enumerate
+Update the max index if needed.
+\end_layout
+
+\begin_layout Enumerate
+Check if the current configuration is one that we already saw, if not, save
+ the configuration to the configurations' tape.
+\end_layout
+
+\begin_layout Enumerate
+If we 
+\series bold
+did
+\series default
+ see the current configuration before, return the current max index.
+\end_layout
+
+\begin_layout Enumerate
+Continue to the next step of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $M$
+\end_inset
+
+ has a max index, then there are only a constant number of configurations
+ it can be in.
+ Thus, eventually 
+\begin_inset Formula $M$
+\end_inset
+
+ will either halt or get into a configuration it was in before.
+ Either way we'll halt out TM and return the max index.
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Formula $f_{x}\left(n\right)=\max\left\{ f_{1}\left(\left\langle M\right\rangle \right):M\in E_{n}\right\} $
+\end_inset
+
+ with 
+\begin_inset Formula $E_{n}$
+\end_inset
+
+ a set of all the TM with 
+\begin_inset Formula $n$
+\end_inset
+
+ states that stop on 
+\begin_inset Formula $\eps$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Yes! It's computable.
+\end_layout
+
+\begin_layout Standard
+The function is computable.
+ Since 
+\begin_inset Formula $E_{n}$
+\end_inset
+
+ is a finite set for each 
+\begin_inset Formula $n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+For each 
+\begin_inset Formula $M\in E_{n}$
+\end_inset
+
+ it has 
+\begin_inset Formula $n$
+\end_inset
+
+ states.
+ There's a finite number of ways to define it (for each of the 
+\begin_inset Formula $3$
+\end_inset
+
+ reading options, there are 
+\begin_inset Formula $3$
+\end_inset
+
+ options for movement of the reading head, for each, there's 
+\begin_inset Formula $n-1$
+\end_inset
+
+ options for the next state).
+\end_layout
+
+\begin_layout Standard
+Thus 
+\begin_inset Formula $E_{n}$
+\end_inset
+
+ is a finite set of TMs.
+ So we can run the function from section 
+\begin_inset Formula $1$
+\end_inset
+
+ on each simultaneously (one step on each 
+\begin_inset Formula $M\in E_{n}$
+\end_inset
+
+ at a time).
+\end_layout
+
+\begin_layout Standard
+Since all of the TMs halt on 
+\begin_inset Formula $\eps$
+\end_inset
+
+, then 
+\begin_inset Formula $f_{1}$
+\end_inset
+
+ will eventually halt with a return value.
+ Then we can compare all the values that we got and return the max.
+\end_layout
+
+\begin_layout Section
+Flexible acceptance
 \end_layout
 
 \begin_layout Standard
