@@ -1,0 +1,2309 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass amsart
+\begin_preamble
+\usepackage{xcolor}
+\pagecolor[rgb]{0.15,0.15,0.15} %black
+\color[rgb]{1,1,1} %grey
+
+\newfontfamily\mylistingsfont{Droid Sans Mono for Powerline}
+\definecolor{lbcolor}{rgb}{0.3,0.3,0.3}  
+\definecolor{lkwcolor}{rgb}{0.7,0.7,0.9}  
+\end_preamble
+\use_default_options true
+\begin_removed_modules
+theorems-ams
+\end_removed_modules
+\begin_modules
+eqs-within-sections
+figs-within-sections
+linguistics
+theorems-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "Arial"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1cm
+\topmargin 1cm
+\rightmargin 1cm
+\bottommargin 1.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\listings_params "basicstyle={\mylistingsfont},language={C++},backgroundcolor={\color{lbcolor}},showstringspaces=false,xleftmargin=5mm,aboveskip=0pt,belowskip=0pt,keywordstyle={\bfseries\color{lkwcolor}},morekeywords={include, printf}"
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\undeq}[1]{\underset{\text{#1}}{\underbrace{=}}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\und}[2]{\underset{\text{#2}}{\underbrace{#1}}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\upreq}[1]{\overset{#1}{\overbrace{=}}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\upr}[2]{\overset{#2}{\overbrace{#1}}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\Z}{\mathbb{Z}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\N}{\mathbb{N}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\C}{\mathbb{C}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\P}{\mathbb{P}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\Q}{\mathbb{Q}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\R}{\mathbb{R}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\Ra}{\Longrightarrow}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\Lra}{\Longleftrightarrow}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\La}{\Longleftarrow}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\ra}{\rightarrow}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\la}{\leftarrow}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\lra}{\longleftrightarrow}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\set}[2]{\left\{  #1\mid#2\right\}  }
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\e}[2]{\left(#1,#2\right)}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\abs}[1]{\left|#1\right|}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\seg}[2]{\left[#1,#2\right]}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\absv}{\left|V\right|}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\renewcommand{\absv}{\left|E\right|}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\sseq}{\subseteq}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\nsseq}{\nsubseteq}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\ewfunc}[1]{#1:E\ra\R}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\ewfuncp}[1]{#1:E\ra\R^{+}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\ewfuncnn}[1]{#1:E\ra\R_{\geq0}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\vwfunc}[1]{#1:V\ra\R}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\d}{\partial}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\h}[1]{\hat{#1}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\hi}{\hat{i}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\hj}{\hat{j}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\hk}{\hat{k}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\hx}{\hat{x}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\hy}{\hat{y}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\hz}{\hat{z}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\grad}{\vec{\nabla}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\lam}{\lambda}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\g}{\gamma}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\gam}{\gamma}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\Gam}{\Gamma}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\oiint}{\varoiint}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\eps}{\varepsilon}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\ez}{\varepsilon_{0}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\vF}{\vec{F}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\vN}{\vec{N}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\renewcommand{\eps}{\varepsilon}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\t}{\theta}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\p}{\phi}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\vp}{\varphi}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\half}{\frac{1}{2}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\tp}{2\pi}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\c}[1]{\dot{#1}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\exp}[1]{\cdot10^{#1}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\hc}{\c h\c c}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\hb}{\c{\hslash}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\varF}{\mathcal{F}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\es}{\emptyset}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\nin}{\notin}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\Mx}{\left(\left\langle M\right\rangle ,x\right)}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\oHP}{\overline{HP}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\fa}{\forall}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\ex}{\exists}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\Ss}{\Sigma^{*}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\ls}{L_{S_{1},S_{2}}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+Computation Midterm 2022 Spring - 24.05.2022
+\end_layout
+
+\begin_layout Author
+Gur Telem
+\end_layout
+
+\begin_layout Section
+Question
+\end_layout
+
+\begin_layout Subsection
+Section
+\end_layout
+
+\begin_layout Standard
+I don't have enough time to formalize fully.
+ Sorry.
+\end_layout
+
+\begin_layout Standard
+As seen in the tutorial, the execution tree of 
+\begin_inset Formula $M$
+\end_inset
+
+ (non deterministic) is a binary tree.
+ We can do a BFS order of execution to simulate taking every possible branch,
+ and if we halted and accepted in one of the branches, we accept in the
+ 
+\begin_inset Formula $M'$
+\end_inset
+
+ deterministic.
+\end_layout
+
+\begin_layout Standard
+We know that 
+\begin_inset Formula $BFS$
+\end_inset
+
+ is computable, thus 
+\begin_inset Formula $M'$
+\end_inset
+
+ is as following
+\end_layout
+
+\begin_layout Enumerate
+For each 
+\begin_inset Formula $i\in\left\{ 1,2,\dots\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Take the 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ the 
+\begin_inset Formula $i$
+\end_inset
+
+th config that we get from the BFS search on the execution tree of 
+\begin_inset Formula $M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+If in this config, we halt 
+\begin_inset Formula $M$
+\end_inset
+
+, return the same as 
+\begin_inset Formula $M$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Section
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+NEED TO PROVE WITH NON DETERMINISTIC? (I don't have time to re-do the proof,
+ :-(
+\end_layout
+
+\begin_layout Standard
+Note: NDTM is Non deterministic Turing machine.
+\end_layout
+
+\begin_layout Standard
+We'll build 
+\begin_inset Formula $M'$
+\end_inset
+
+ TM (Turing Machine) s.t.
+ (such that) 
+\begin_inset Formula $L\left(M'\right)=L$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $M'$
+\end_inset
+
+ for 
+\begin_inset Formula $\left\langle M\right\rangle $
+\end_inset
+
+ will be defined as such:
+\end_layout
+
+\begin_layout Enumerate
+Iterate with 
+\begin_inset Formula $i\in\left\{ 1,2,3,4,\dots\right\} $
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Take 
+\begin_inset Formula $w_{1},w_{2},\dots,w_{i}\in\Ss$
+\end_inset
+
+ (
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ is the 
+\begin_inset Formula $i$
+\end_inset
+
+th word in 
+\begin_inset Formula $\Ss$
+\end_inset
+
+ in lexicographic order.
+ It's possible because 
+\begin_inset Formula $\left|\Ss\right|=\aleph_{0}$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Enumerate
+Run 
+\begin_inset Formula $M$
+\end_inset
+
+ on each of these for 
+\begin_inset Formula $i$
+\end_inset
+
+ steps (
+\begin_inset Formula $i$
+\end_inset
+
+ steps each)
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $M$
+\end_inset
+
+ halts for one of them (say 
+\begin_inset Formula $w_{t}$
+\end_inset
+
+), check if the output of 
+\begin_inset Formula $M$
+\end_inset
+
+ is 
+\begin_inset Formula $w_{t}$
+\end_inset
+
+.
+ If it is, accept and halt.
+\end_layout
+
+\begin_layout Enumerate
+Continue to next iteration.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Formula $M'$
+\end_inset
+
+ is a valid TM because it's made of basic compilation steps.
+\end_layout
+
+\begin_layout Standard
+RTP: 
+\begin_inset Formula $L\left(M'\right)=L$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Assume 
+\begin_inset Formula $\left\langle M\right\rangle \in L$
+\end_inset
+
+.
+ Thus there's an 
+\begin_inset Formula $x\in\Ss$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $f_{M}\left(x\right)=x$
+\end_inset
+
+.
+ We know that 
+\begin_inset Formula $x$
+\end_inset
+
+ has a lexicographic index in 
+\begin_inset Formula $\Ss$
+\end_inset
+
+.
+ Assume the index is 
+\begin_inset Formula $i$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $f_{M}\left(x\right)$
+\end_inset
+
+ is defined, it means that 
+\begin_inset Formula $M$
+\end_inset
+
+ halts on 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Mark the number of steps 
+\begin_inset Formula $k$
+\end_inset
+
+.
+ Mark 
+\begin_inset Formula $t=\max\left\{ i,k\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Thus in the iteration 
+\begin_inset Formula $t$
+\end_inset
+
+, 
+\begin_inset Formula $M'$
+\end_inset
+
+ will run 
+\begin_inset Formula $M$
+\end_inset
+
+ on 
+\begin_inset Formula $w_{1},\dots,w_{t}$
+\end_inset
+
+ (which includes 
+\begin_inset Formula $x=w_{i}$
+\end_inset
+
+ because 
+\begin_inset Formula $i\leq t$
+\end_inset
+
+).
+ And also it will run 
+\begin_inset Formula $M$
+\end_inset
+
+ for 
+\begin_inset Formula $t\geq k$
+\end_inset
+
+ steps.
+ Meaning that 
+\begin_inset Formula $M$
+\end_inset
+
+ will halt on 
+\begin_inset Formula $x$
+\end_inset
+
+ returning 
+\begin_inset Formula $x$
+\end_inset
+
+ itself.
+ And from the definition of 
+\begin_inset Formula $M'$
+\end_inset
+
+, it will accept and halt in step 
+\begin_inset Formula $1.c$
+\end_inset
+
+ meaning that 
+\begin_inset Formula $\left\langle M\right\rangle \in L\left(M\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Here I realize that I did it in a deterministic way and left it.
+ Sorry, no time.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Question
+\end_layout
+
+\begin_layout Subsection
+RTP 
+\begin_inset Formula $RE\sseq A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $L\in RE$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Thus there's an 
+\begin_inset Formula $M$
+\end_inset
+
+ TM s.t.
+ 
+\begin_inset Formula $L\left(M\right)=L$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Let's build 
+\begin_inset Formula $M'$
+\end_inset
+
+ as such:
+\end_layout
+
+\begin_layout Enumerate
+Run 
+\begin_inset Formula $M$
+\end_inset
+
+ for one step
+\end_layout
+
+\begin_layout Enumerate
+If it did an 
+\begin_inset Formula $S$
+\end_inset
+
+ step writing 
+\begin_inset Formula $x$
+\end_inset
+
+ and moving to 
+\begin_inset Formula $q_{i}$
+\end_inset
+
+, do instead:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+an 
+\begin_inset Formula $R$
+\end_inset
+
+, writing 
+\begin_inset Formula $x$
+\end_inset
+
+ and moving to 
+\begin_inset Formula $q_{i}$
+\end_inset
+
+ and immediately after 
+\begin_inset Formula $L$
+\end_inset
+
+, writing the same value we read, and staying in 
+\begin_inset Formula $q_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+If 
+\begin_inset Formula $M$
+\end_inset
+
+ halted, return as it did.
+\end_layout
+
+\begin_layout Enumerate
+Go to step 
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We see that 
+\begin_inset Formula $M'$
+\end_inset
+
+ is equivalent to 
+\begin_inset Formula $M$
+\end_inset
+
+ because 
+\begin_inset Formula $M'$
+\end_inset
+
+ accepts a word, it's only because 
+\begin_inset Formula $M'$
+\end_inset
+
+ accepted a word.
+\end_layout
+
+\begin_layout Standard
+And since before and after step 
+\begin_inset Formula $2.a$
+\end_inset
+
+ the configuration of 
+\begin_inset Formula $M$
+\end_inset
+
+ is the same, then it will not change it's operation (it also won't get
+ stuck there).
+\end_layout
+
+\begin_layout Standard
+Thus 
+\begin_inset Formula $L\left(M'\right)=L\left(M\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Now, since 
+\begin_inset Formula $M'$
+\end_inset
+
+ accepts 
+\begin_inset Formula $L\left(M\right)=L$
+\end_inset
+
+, we got that 
+\begin_inset Formula $Flex-L\left(M'\right)=L$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Meaning that 
+\begin_inset Formula $L\in A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Thus 
+\begin_inset Formula $RE\sseq A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Q.E.D
+\end_layout
+
+\begin_layout Subsection
+RTP: 
+\begin_inset Formula $\oHP\in A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Let's define 
+\begin_inset Formula $M'$
+\end_inset
+
+ for input 
+\begin_inset Formula $\left(\left\langle M\right\rangle ,x\right)$
+\end_inset
+
+ as follows:
+\end_layout
+
+\begin_layout Enumerate
+Run 
+\begin_inset Formula $M$
+\end_inset
+
+ on 
+\begin_inset Formula $x$
+\end_inset
+
+ for 
+\begin_inset Formula $1$
+\end_inset
+
+ step
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $M$
+\end_inset
+
+ halted, reject and halt.
+\end_layout
+
+\begin_layout Enumerate
+Do an 
+\begin_inset Formula $S$
+\end_inset
+
+ step
+\end_layout
+
+\begin_layout Enumerate
+Go back to step 
+\begin_inset Formula $1$
+\end_inset
+
+ (to continue running for 
+\begin_inset Formula $1$
+\end_inset
+
+ more step, not to start over).
+\end_layout
+
+\begin_layout Standard
+Another way to describe it is (but it's equivalent, we will refer to the
+ previous definition):
+\end_layout
+
+\begin_layout Enumerate
+For 
+\begin_inset Formula $i\in\left\{ 1,2,\dots\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Run 
+\begin_inset Formula $M$
+\end_inset
+
+ on 
+\begin_inset Formula $x$
+\end_inset
+
+ for 
+\begin_inset Formula $i$
+\end_inset
+
+ steps (from the beginning)
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $M$
+\end_inset
+
+ halted, reject and halt.
+\end_layout
+
+\begin_layout Enumerate
+Do an 
+\begin_inset Formula $S$
+\end_inset
+
+ step
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Let 
+\begin_inset Formula $\left(\left\langle M\right\rangle ,x\right)\in Flex-L\left(M'\right)$
+\end_inset
+
+.
+ Since the only place where 
+\begin_inset Formula $M'$
+\end_inset
+
+ halts is step 
+\begin_inset Formula $2$
+\end_inset
+
+, then if 
+\begin_inset Formula $M'$
+\end_inset
+
+ halts it's because 
+\begin_inset Formula $M$
+\end_inset
+
+ halted and then 
+\begin_inset Formula $M'$
+\end_inset
+
+ rejects the input.
+\end_layout
+
+\begin_layout Standard
+Meaning that for input 
+\begin_inset Formula $\left(\left\langle M\right\rangle ,x\right)$
+\end_inset
+
+ 
+\begin_inset Formula $M'$
+\end_inset
+
+ did an infinite amount of 
+\begin_inset Formula $S$
+\end_inset
+
+ steps.
+\end_layout
+
+\begin_layout Standard
+BWoC 
+\begin_inset Formula $\left(\left\langle M\right\rangle ,x\right)\in HP$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Thus 
+\begin_inset Formula $M'$
+\end_inset
+
+ will halt after 
+\begin_inset Formula $k$
+\end_inset
+
+ iterations (
+\begin_inset Formula $k$
+\end_inset
+
+ is the number of steps until 
+\begin_inset Formula $M$
+\end_inset
+
+ halts on 
+\begin_inset Formula $x$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+Since each iteration is a finite number of steps for 
+\begin_inset Formula $M'$
+\end_inset
+
+, we got a contradiction to 
+\begin_inset Formula $M'$
+\end_inset
+
+ doing an infinite amount of 
+\begin_inset Formula $S$
+\end_inset
+
+ steps.
+\end_layout
+
+\begin_layout Standard
+Thus 
+\begin_inset Formula $\left(\left\langle M\right\rangle ,x\right)\nin HP\Ra\left(\left\langle M\right\rangle ,x\right)\in\oHP$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Now assume 
+\begin_inset Formula $\left(\left\langle M\right\rangle ,x\right)\in\oHP$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Ra$
+\end_inset
+
+ 
+\begin_inset Formula $M$
+\end_inset
+
+ never halts for 
+\begin_inset Formula $x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Ra$
+\end_inset
+
+ 
+\begin_inset Formula $M'$
+\end_inset
+
+ (on 
+\begin_inset Formula $\left(\left\langle M\right\rangle ,x\right)$
+\end_inset
+
+) will do an infinite amount of iterations 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Ra$
+\end_inset
+
+
+\begin_inset Formula $M'$
+\end_inset
+
+ will do an infinite amount of 
+\begin_inset Formula $S$
+\end_inset
+
+ steps
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Ra$
+\end_inset
+
+ 
+\begin_inset Formula $\left(\left\langle M\right\rangle ,x\right)\in Flex-L\left(M'\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+together we got that 
+\begin_inset Formula $Flex-L\left(M'\right)=\oHP\Ra\oHP\in A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Q.E.D
+\end_layout
+
+\begin_layout Subsection
+Section
+\end_layout
+
+\begin_layout Standard
+Proof:
+\end_layout
+
+\begin_layout Standard
+Let's define 
+\begin_inset Formula $M'$
+\end_inset
+
+ a TM which defines for input 
+\begin_inset Formula $\left\langle M\right\rangle $
+\end_inset
+
+ as such:
+\end_layout
+
+\begin_layout Enumerate
+Iterate with 
+\begin_inset Formula $i\in\left\{ 1,2,3,4,\dots\right\} $
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Set variable 
+\begin_inset Formula $count=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Take 
+\begin_inset Formula $w_{1},w_{2},\dots,w_{i}\in\Ss$
+\end_inset
+
+ (lexicographical order)
+\end_layout
+
+\begin_layout Enumerate
+Run 
+\begin_inset Formula $M$
+\end_inset
+
+ on each of them for 
+\begin_inset Formula $i$
+\end_inset
+
+ steps (replacing each 
+\begin_inset Formula $S$
+\end_inset
+
+ step with 
+\begin_inset Formula $R$
+\end_inset
+
+ and then 
+\begin_inset Formula $L$
+\end_inset
+
+ which is equivalent).
+\end_layout
+
+\begin_layout Enumerate
+For each 
+\begin_inset Formula $w_{t}$
+\end_inset
+
+ (
+\begin_inset Formula $1\leq t\leq i$
+\end_inset
+
+) that accepts (and halts), increase 
+\begin_inset Formula $count$
+\end_inset
+
+ by 
+\begin_inset Formula $1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $count\geq4$
+\end_inset
+
+, halt and reject.
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $count=3$
+\end_inset
+
+ do an 
+\begin_inset Formula $S$
+\end_inset
+
+ step.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Let 
+\begin_inset Formula $\left\langle M\right\rangle \in Flex-L\left(M'\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Thus 
+\begin_inset Formula $M'$
+\end_inset
+
+ doesn't halt on 
+\begin_inset Formula $\left\langle M\right\rangle $
+\end_inset
+
+ (if 
+\begin_inset Formula $M'$
+\end_inset
+
+ halts, it only rejects).
+ Meaning that 
+\begin_inset Formula $M'$
+\end_inset
+
+ did an infinite amount of 
+\begin_inset Formula $S$
+\end_inset
+
+ steps.
+\end_layout
+
+\begin_layout Standard
+BWoC: 
+\begin_inset Formula $\left\langle M\right\rangle \nin L_{=3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Case
+\begin_inset Formula $\left|L\left(M\right)\right|<3$
+\end_inset
+
+: Thus 
+\begin_inset Formula $count$
+\end_inset
+
+ will only be incremented twice at most in each iteration (we never found
+ 
+\begin_inset Formula $3$
+\end_inset
+
+ different 
+\begin_inset Formula $w_{t}$
+\end_inset
+
+ that 
+\begin_inset Formula $M$
+\end_inset
+
+ accepts).
+ Since we reset 
+\begin_inset Formula $count$
+\end_inset
+
+ before each, then 
+\begin_inset Formula $count$
+\end_inset
+
+ never reaches 
+\begin_inset Formula $3$
+\end_inset
+
+.
+ Meaning we will never do an 
+\begin_inset Formula $S$
+\end_inset
+
+ step (we removed the 
+\begin_inset Formula $S$
+\end_inset
+
+ steps from everywhere else).
+ Thus 
+\begin_inset Formula $\left\langle M\right\rangle \nin Flex-L\left(M'\right)$
+\end_inset
+
+ (let alone we don't have an infinite amount of 
+\begin_inset Formula $S$
+\end_inset
+
+ steps in its execution).
+\end_layout
+
+\begin_layout Case
+\begin_inset Formula $\left|L\left(M\right)\right|>3$
+\end_inset
+
+: Assume 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ is the 
+\begin_inset Formula $4$
+\end_inset
+
+th word lexical index which is accepted by 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ Assume 
+\begin_inset Formula $k$
+\end_inset
+
+ is the max between the steps needed to accept all of these 
+\begin_inset Formula $4$
+\end_inset
+
+ words.
+ Thus after 
+\begin_inset Formula $\max\left\{ i,k\right\} $
+\end_inset
+
+ iterations, 
+\begin_inset Formula $M'$
+\end_inset
+
+ will hat in step 
+\begin_inset Formula $1.e$
+\end_inset
+
+ rejecting.
+ Meaning that 
+\begin_inset Formula $\left\langle M\right\rangle \nin Flex-L\left(M'\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Thus 
+\begin_inset Formula $\left\langle M\right\rangle \in L_{=3}$
+\end_inset
+
+.
+ Meaning 
+\begin_inset Formula $Flex-L\left(M'\right)\sseq L_{=3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now assume 
+\begin_inset Formula $\left\langle M\right\rangle \in L_{=3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Similarly to before Assume 
+\begin_inset Formula $w_{i}$
+\end_inset
+
+ is the 
+\begin_inset Formula $3$
+\end_inset
+
+th word lexical index which is accepted by 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ Assume 
+\begin_inset Formula $k$
+\end_inset
+
+ is the max between the steps needed to accept all of these 
+\begin_inset Formula $3$
+\end_inset
+
+ words.
+\end_layout
+
+\begin_layout Standard
+From the 
+\begin_inset Formula $\max\left\{ i,k\right\} $
+\end_inset
+
+th iteration and forward, we will always find exactly 
+\begin_inset Formula $3$
+\end_inset
+
+ words that are accepted by 
+\begin_inset Formula $M$
+\end_inset
+
+ (the definition of 
+\begin_inset Formula $L_{=3}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+Thus from this iteration forward we will never halt, and for each iteration
+ we will do an 
+\begin_inset Formula $S$
+\end_inset
+
+ step.
+\end_layout
+
+\begin_layout Standard
+Meaning 
+\begin_inset Formula $M'$
+\end_inset
+
+ will do an infinite amount of 
+\begin_inset Formula $S$
+\end_inset
+
+ steps 
+\begin_inset Formula $\Ra$
+\end_inset
+
+ 
+\begin_inset Formula $L_{=3}\sseq Flex-L\left(M'\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+thus 
+\begin_inset Formula $Flex-L\left(M'\right)=L_{=3}\Ra L_{=3}\in A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Q.E.D
+\end_layout
+
+\begin_layout Section
+Question
+\end_layout
+
+\begin_layout Standard
+Mark 
+\begin_inset Formula $L_{1}\in S_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $L_{2}\in S_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Because 
+\begin_inset Formula $S_{1},S_{2}\sseq RE$
+\end_inset
+
+ we get that there are 
+\begin_inset Formula $M_{1}$
+\end_inset
+
+and 
+\begin_inset Formula $M_{2}$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $L\left(M_{1}\right)=S_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $L\left(M_{2}\right)=S_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Using a reduction 
+\begin_inset Formula $HP\leq\ls$
+\end_inset
+
+ with 
+\begin_inset Formula $f\left(\left(\left\langle M\right\rangle ,x\right)\right)=\left(\left\langle M_{x,1}\right\rangle ,\left\langle M_{x,2}\right\rangle \right)$
+\end_inset
+
+ with 
+\begin_inset Formula $M_{x,i}$
+\end_inset
+
+ defined for input 
+\begin_inset Formula $w$
+\end_inset
+
+ as such:
+\end_layout
+
+\begin_layout Enumerate
+Run 
+\begin_inset Formula $M$
+\end_inset
+
+ on 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Run 
+\begin_inset Formula $M_{i}$
+\end_inset
+
+ on 
+\begin_inset Formula $w$
+\end_inset
+
+ and return as it.
+\end_layout
+
+\begin_layout Standard
+This is a full computable function.
+\end_layout
+
+\begin_layout Standard
+I don't have time to show it's a valid reduction but from the reduction's
+ theorem we get that since 
+\begin_inset Formula $HP\nin R\Ra\ls\nin R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Kinda Q.E.D
+\end_layout
+
+\begin_layout Section
+Question
+\end_layout
+
+\begin_layout Subsection
+Section
+\end_layout
+
+\begin_layout Standard
+RTP: 
+\begin_inset Formula $L_{1}\nin RE$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Using a reduction 
+\begin_inset Formula $\oHP\leq L_{1}$
+\end_inset
+
+ with 
+\begin_inset Formula $f\left(\left(\left\langle M\right\rangle ,x\right)\right)=\left\langle M_{x}\right\rangle $
+\end_inset
+
+ with 
+\begin_inset Formula $M_{x}$
+\end_inset
+
+ defined for any input (ignores input) as such:
+\end_layout
+
+\begin_layout Enumerate
+Run 
+\begin_inset Formula $M$
+\end_inset
+
+ on 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Accept (and halt)
+\end_layout
+
+\begin_layout Standard
+This is a full and computable function.
+\end_layout
+
+\begin_layout Standard
+Additionally 
+\begin_inset Formula $\left(\left\langle M\right\rangle ,x\right)\in\oHP\Lra M\text{ doesn't halt for }x\Lra M_{x}\text{ is stuck at step \ensuremath{1} for all inputs }\Lra L\left(M_{x}\right)=\es=R\left(M_{x}\right)\Ra\left\langle M_{x}\right\rangle \in L_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+But if 
+\begin_inset Formula $f\left(\left(\left\langle M\right\rangle ,x\right)\right)=\left\langle M_{x}\right\rangle \nin L_{1}$
+\end_inset
+
+ it means that there's 
+\begin_inset Formula $w\in L\left(M_{x}\right)\wedge w\nin R\left(M_{x}\right)$
+\end_inset
+
+ (the opposite isn't possible because 
+\begin_inset Formula $M_{x}$
+\end_inset
+
+ will never reject).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $w\in L\left(M_{x}\right)$
+\end_inset
+
+ meaning that 
+\begin_inset Formula $M_{x}$
+\end_inset
+
+ accepted 
+\begin_inset Formula $w$
+\end_inset
+
+ 
+\begin_inset Formula $\Ra$
+\end_inset
+
+ 
+\begin_inset Formula $M$
+\end_inset
+
+ halted for 
+\begin_inset Formula $x$
+\end_inset
+
+ 
+\begin_inset Formula $\Ra\left(\left\langle M\right\rangle ,x\right)\nin\oHP$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+We got that 
+\begin_inset Formula $f\left(\left(\left\langle M\right\rangle ,x\right)\right)\in L_{1}\Lra\left(\left\langle M\right\rangle ,x\right)\in\oHP$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+This is a valid reduction and from the reduction's theorem we get that since
+ 
+\begin_inset Formula $\oHP\nin RE\Ra L_{1}\nin RE$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Q.E.D
+\end_layout
+
+\begin_layout Subsection
+Section
+\end_layout
+
+\begin_layout Standard
+RTP: 
+\begin_inset Formula $L_{2}=\Ss$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+It's obvious that 
+\begin_inset Formula $L_{2}\sseq\Ss$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Assume 
+\begin_inset Formula $\left\langle M\right\rangle \in\Ss$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Let's build 
+\begin_inset Formula $M'$
+\end_inset
+
+ for input 
+\begin_inset Formula $x$
+\end_inset
+
+ as such:
+\end_layout
+
+\begin_layout Enumerate
+Run 
+\begin_inset Formula $M$
+\end_inset
+
+ on 
+\begin_inset Formula $x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Return the opposite of 
+\begin_inset Formula $M$
+\end_inset
+
+ (if 
+\begin_inset Formula $M$
+\end_inset
+
+ accepted, reject, and if 
+\begin_inset Formula $M$
+\end_inset
+
+ rejected, accept).
+\end_layout
+
+\begin_layout Case
+\begin_inset Formula $M$
+\end_inset
+
+ rejects 
+\begin_inset Formula $x$
+\end_inset
+
+ 
+\begin_inset Formula $\Ra M'$
+\end_inset
+
+ accepts 
+\begin_inset Formula $x$
+\end_inset
+
+ 
+\begin_inset Formula $\Ra$
+\end_inset
+
+ 
+\begin_inset Formula $x\in L\left(M'\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Case
+\begin_inset Formula $M$
+\end_inset
+
+ accepts 
+\begin_inset Formula $x$
+\end_inset
+
+ 
+\begin_inset Formula $\Ra M'$
+\end_inset
+
+ rejects 
+\begin_inset Formula $x$
+\end_inset
+
+ 
+\begin_inset Formula $\Ra$
+\end_inset
+
+ 
+\begin_inset Formula $x\nin L\left(M'\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Case
+\begin_inset Formula $M$
+\end_inset
+
+ doesn't stop on 
+\begin_inset Formula $x$
+\end_inset
+
+ 
+\begin_inset Formula $\Ra$
+\end_inset
+
+ 
+\begin_inset Formula $M'$
+\end_inset
+
+ doesn't stop on 
+\begin_inset Formula $x$
+\end_inset
+
+ 
+\begin_inset Formula $\Ra$
+\end_inset
+
+ 
+\begin_inset Formula $x\nin L\left(M'\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x\in L_{2}\Lra x\in R\left(M\right)\Lra x\text{ is rejected by }M\Lra x\text{ is accepted by }M'\Lra x\in L\left(M'\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Meaning that 
+\begin_inset Formula $\left\langle M\right\rangle \in L_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Thus 
+\begin_inset Formula $L_{2}=\Ss$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Meaning that 
+\begin_inset Formula $L_{2}\in R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Q.E.D
+\end_layout
+
+\begin_layout Subsection
+Section
+\end_layout
+
+\begin_layout Standard
+Let's show a reduction 
+\begin_inset Formula $HP\leq L_{3}$
+\end_inset
+
+ defined with 
+\begin_inset Formula $f\left(\left(\left\langle M\right\rangle ,x\right)\right)=\left\langle M_{x}\right\rangle $
+\end_inset
+
+ while 
+\begin_inset Formula $M_{x}$
+\end_inset
+
+ is defined for any input as such:
+\end_layout
+
+\begin_layout Enumerate
+Run 
+\begin_inset Formula $M$
+\end_inset
+
+ on 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Reject and halt immediately.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left(\left\langle M\right\rangle ,x\right)\in HP\Lra M\text{ halts for }x\Lra M_{x}\text{ halts for \text{\eps} and rejects}\Lra\eps\in R\left(M\right)\neq\es\Lra\left\langle M_{x}\right\rangle \in L_{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This is because the only way 
+\begin_inset Formula $M_{x}$
+\end_inset
+
+ halts if after 
+\begin_inset Formula $M$
+\end_inset
+
+ finished running for 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Thus this is a valid reduction (it's a full, computable function with 
+\begin_inset Formula $\left(\left\langle M\right\rangle ,x\right)\in HP\Lra f\left(\left(\left\langle M\right\rangle ,x\right)\right)\in L_{3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+And from the reduction's theorem, because 
+\begin_inset Formula $HP\nin R\Ra L_{3}\nin R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Now we'll prove that 
+\begin_inset Formula $L_{3}\in RE$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Let's build 
+\begin_inset Formula $M'$
+\end_inset
+
+ TM which accepts 
+\begin_inset Formula $L_{3}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $M'$
+\end_inset
+
+ for input 
+\begin_inset Formula $\left\langle M\right\rangle $
+\end_inset
+
+ is defined as such:
+\end_layout
+
+\begin_layout Enumerate
+Iterate with 
+\begin_inset Formula $i\in\left\{ 1,2,3,4,\dots\right\} $
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Take 
+\begin_inset Formula $w_{1},w_{2},\dots,w_{i}\in\Ss$
+\end_inset
+
+ (lexicographical order)
+\end_layout
+
+\begin_layout Enumerate
+Run 
+\begin_inset Formula $M$
+\end_inset
+
+ on 
+\begin_inset Formula $w_{1},w_{2},\dots,w_{i}$
+\end_inset
+
+ for 
+\begin_inset Formula $i$
+\end_inset
+
+ steps.
+ If (at least) one of them halted 
+\series bold
+and rejected
+\series default
+, accept and halt.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Formula $\left\langle M\right\rangle \in L\left(M'\right)\Lra$
+\end_inset
+
+ 
+\begin_inset Formula $M'$
+\end_inset
+
+ will halt in step 
+\begin_inset Formula $1.b$
+\end_inset
+
+ 
+\begin_inset Formula $\Lra$
+\end_inset
+
+ 
+\begin_inset Formula $\exists i,t\in\N$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $t\leq i$
+\end_inset
+
+ and 
+\begin_inset Formula $M$
+\end_inset
+
+ rejected 
+\begin_inset Formula $w_{t}$
+\end_inset
+
+ within 
+\begin_inset Formula $i$
+\end_inset
+
+ steps at most 
+\begin_inset Formula $\Lra$
+\end_inset
+
+ 
+\begin_inset Formula $R\left(M\right)\neq\es\Lra\left\langle M\right\rangle \in L_{3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus 
+\begin_inset Formula $L\left(M'\right)=L_{3}$
+\end_inset
+
+ which means 
+\begin_inset Formula $L_{3}\in RE\backslash R$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Q.E.D
+\end_layout
+
+\end_body
+\end_document

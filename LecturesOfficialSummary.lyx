@@ -972,21 +972,6 @@ blank
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $q\in Q$
-\end_inset
-
- הוא מצב של 
-\begin_inset Formula $M$
-\end_inset
-
- הנקרא 
-\series bold
-המצב הנוכחי
-\series default
- של החישוב.
-\end_layout
-
-\begin_layout Itemize
 \begin_inset Formula $\alpha\in\Gamma^{*}$
 \end_inset
 
@@ -999,6 +984,21 @@ blank
 תוכן הסרט
 \series default
 .
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $q\in Q$
+\end_inset
+
+ הוא מצב של 
+\begin_inset Formula $M$
+\end_inset
+
+ הנקרא 
+\series bold
+המצב הנוכחי
+\series default
+ של החישוב.
 \end_layout
 
 \begin_layout Itemize
