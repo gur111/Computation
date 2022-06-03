@@ -8,6 +8,14 @@
 \begin_preamble
 \date{}
 \usepackage{fullpage}
+
+\usepackage{xcolor}
+\pagecolor[rgb]{0.15,0.15,0.15} %black
+\color[rgb]{1,1,1} %grey
+
+\newfontfamily\mylistingsfont{Droid Sans Mono for Powerline}
+\definecolor{lbcolor}{rgb}{0.3,0.3,0.3}  
+\definecolor{lkwcolor}{rgb}{0.7,0.7,0.9}  
 \end_preamble
 \use_default_options true
 \maintain_unincluded_children false
@@ -34,7 +42,16 @@
 \index_command default
 \paperfontsize default
 \spacing single
-\use_hyperref false
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 4
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref section
+\pdf_pdfusetitle true
 \papersize default
 \use_geometry false
 \use_package amsmath 1
@@ -57,6 +74,7 @@
 \justification true
 \use_refstyle 1
 \use_minted 0
+\boxbgcolor #dc322f
 \branch Drafts
 \selected 0
 \filename_suffix 0
@@ -19673,7 +19691,7 @@ SUDOKU
 \end_inset
 
  האם 
-\begin_inset Formula $y^{\prime}\sigma\in L_{f}^{\prime}$
+\begin_inset Formula $\left(x,y^{\prime}\sigma\right)\in L_{f}^{\prime}$
 \end_inset
 
 .
