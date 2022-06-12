@@ -106,8 +106,8 @@
 \end_index
 \secnumdepth 3
 \tocdepth 3
-\paragraph_separation indent
-\paragraph_indentation default
+\paragraph_separation skip
+\defskip smallskip
 \is_math_indent 0
 \math_numbering_side default
 \quotes_style english
@@ -115,7 +115,7 @@
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
-\tracking_changes false
+\tracking_changes true
 \output_changes false
 \html_math_output 0
 \html_css_as_file 0
@@ -26175,7 +26175,7 @@ x_{i}+x_{j} & \ge1
 \begin_inset Formula $A,b$
 \end_inset
 
- דורשת מעבר יחידה על 
+ דורשת מעבר יחיד על 
 \begin_inset Formula $E$
 \end_inset
 
